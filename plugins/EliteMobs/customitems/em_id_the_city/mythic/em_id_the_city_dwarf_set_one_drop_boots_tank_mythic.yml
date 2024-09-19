@@ -1,0 +1,12 @@
+name: "&fDwarven Boots"
+material: DIAMOND_BOOTS
+level: 30
+lore:
+- "&fNice and sturdy."
+enchantments:
+- PROTECTION_FALL,3
+- PROTECTION_ENVIRONMENTAL,4
+- LOUD_STRIKES,3
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

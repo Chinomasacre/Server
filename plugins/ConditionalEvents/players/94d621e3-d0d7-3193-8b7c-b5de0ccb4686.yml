@@ -1,0 +1,17 @@
+name: Chinomasacre
+events:
+  join:
+    one_time: true
+    cooldown: 0
+  rencompens:
+    one_time: true
+    cooldown: 0
+  rencompensa:
+    one_time: true
+    cooldown: 0
+  fly:
+    one_time: false
+    cooldown: 1720399703151
+  recompensa:
+    one_time: true
+    cooldown: 0

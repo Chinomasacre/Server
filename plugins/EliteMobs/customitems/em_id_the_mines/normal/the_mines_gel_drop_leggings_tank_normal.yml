@@ -1,0 +1,12 @@
+name: "&2Gel Pants"
+material: DIAMOND_LEGGINGS
+level: 20
+lore:
+- "&2Makes all kind of squishy sounds."
+enchantments:
+- PROTECTION_PROJECTILE,2
+- PROTECTION_ENVIRONMENTAL,1
+- LOUD_STRIKES,1
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

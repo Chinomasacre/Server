@@ -1,0 +1,280 @@
+Street Lamp:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: BOOK
+  meta:
+    ==: ItemMeta
+    meta-type: UNSPECIFIC
+    display-name: '{"text":"","extra":["Street Lamp"]}'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "KEStreetLampA"
+      }
+WHITE_CARPET:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: WHITE_CARPET
+LANTERN:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: LANTERN
+IRON_BARS:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: IRON_BARS
+ARMOR_STAND:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: ARMOR_STAND
+§7§l[§6§l토른리넨§7§l] §3§l침대 §c§lB:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '{"text":"","extra":[{"text":"[","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":true},{"text":"토른리넨","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gold","bold":true},{"text":"]
+      ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":true},{"text":"침대
+      ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_aqua","bold":true},{"text":"B","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":true}]}'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "TornBedB"
+      }
+OAK_LOG:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: OAK_LOG
+WHITE_WOOL:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: WHITE_WOOL
+cañon:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"cañon"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "Kanone"
+      }
+SHIELD:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: SHIELD
+OAK_PLANKS:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: OAK_PLANKS
+IRON_INGOT:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: IRON_INGOT
+bañera:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"bañera"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "TornBathtubA"
+      }
+QUARTZ_BRICKS:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: QUARTZ_BRICKS
+Banco de madera:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"Banco de madera"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "TornBenchC"
+      }
+OAK_SLAB:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: OAK_SLAB
+OAK_FENCE:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: OAK_FENCE
+Cortina de baño:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"Cortina de baño"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "TornCurtainA4"
+      }
+Sofa:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"Sofa"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "TornSofaA"
+      }
+mesa de campo:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"mesa de campo"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "TornTableB"
+      }
+ACACIA_SLAB:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: ACACIA_SLAB
+ACACIA_LOG:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: ACACIA_LOG
+Cagadero:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"Cagadero"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "TornToiletA"
+      }
+QUARTZ_BLOCK:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: QUARTZ_BLOCK
+QUARTZ_SLAB:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: QUARTZ_SLAB
+lavamanos:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"lavamanos"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "TornWashstandA"
+      }
+LIGHT_BLUE_WOOL:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: LIGHT_BLUE_WOOL
+Espantapajaros:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"Espantapajaros"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "WirdowwScarecrow"
+      }
+WHEAT:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: WHEAT
+CARVED_PUMPKIN:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: CARVED_PUMPKIN
+LEATHER_CHESTPLATE:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: LEATHER_CHESTPLATE
+LEATHER_LEGGINGS:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: LEATHER_LEGGINGS
+Cama para no dormir:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"Cama para no dormir"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "TornBedB"
+      }
+hoguera:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: PIG_SPAWN_EGG
+  meta:
+    ==: ItemMeta
+    meta-type: SPAWN_EGG
+    display-name: '"hoguera"'
+    ItemFlags:
+    - HIDE_ATTRIBUTES
+    PublicBukkitValues: |-
+      {
+          "furniturelib:model": "TornFireplaceB1"
+      }
+COBBLED_DEEPSLATE:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: COBBLED_DEEPSLATE
+BLACK_STAINED_GLASS_PANE:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: BLACK_STAINED_GLASS_PANE
+CAMPFIRE:
+  ==: org.bukkit.inventory.ItemStack
+  v: 3953
+  type: CAMPFIRE

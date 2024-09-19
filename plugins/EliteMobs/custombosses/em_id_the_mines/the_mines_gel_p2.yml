@@ -1,0 +1,64 @@
+isEnabled: true
+entityType: SLIME
+name: $normalLevel &aGel Head Villager
+level: 20
+instanced: true
+healthMultiplier: 1
+damageMultiplier: 0.9
+powers:
+- attack_weakness.yml
+uniqueLootList:
+- filename: the_mines_gel_drop_boots_dps_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: the_mines_gel_drop_boots_dps_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: the_mines_gel_drop_boots_dps_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: the_mines_gel_drop_bow_dps_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: the_mines_gel_drop_bow_dps_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: the_mines_gel_drop_bow_dps_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: the_mines_gel_drop_chestplate_dps_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: the_mines_gel_drop_chestplate_dps_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: the_mines_gel_drop_chestplate_dps_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: the_mines_gel_drop_helmet_tank_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: the_mines_gel_drop_helmet_tank_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: the_mines_gel_drop_helmet_tank_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: the_mines_gel_drop_leggings_tank_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: the_mines_gel_drop_leggings_tank_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: the_mines_gel_drop_leggings_tank_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+movementSpeedAttribute: 0.8
+frozen: false
+# leashRadius: 30
+followDistance: 30
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: false
+normalizedCombat: true
+dropsRandomLoot: false

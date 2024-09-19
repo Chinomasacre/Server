@@ -1,0 +1,15 @@
+name: "&eMastercraft Leggings"
+material: NETHERITE_LEGGINGS
+level: 30
+lore:
+- "&eA lot of work was put into these"
+- "&eleggings to make them both"
+- "&ecomfortable and shielding."
+enchantments:
+- PROTECTION_FIRE,4
+- PROTECTION_ENVIRONMENTAL,7
+- PROTECTION_FALL,5
+- LOUD_STRIKES,2
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

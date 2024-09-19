@@ -1,0 +1,391 @@
+Config:
+  update_notification: true
+  data_save_time: 5
+  debug_actions: true
+  register_commands:
+  - hello
+  to_condition_groups:
+    group1:
+    - '%player_has_permission_conditionalevents.somepermission% == yes'
+Messages:
+  prefix: '&4[&bConditionalEvents&4] '
+  commandReload: '&aConfig Reloaded.'
+  commandNoPermissions: '&cYou don''t have permissions to use this command.'
+  commandResetError: '&cUse &7/ce reset <player> <event>/all'
+  eventDoesNotExists: '&cThat event doesn''t exists on the config.'
+  eventDataReset: '&aData reset for player &e%player% &aon event &e%event%&a!'
+  eventDataResetAll: '&aAll data reset for player &e%player%&a!'
+  eventDataResetForAllPlayers: '&aData reset for &eall players &aon event &e%event%&a!'
+  eventDataResetAllForAllPlayers: '&aAll player data reset.'
+  eventEnableError: '&cUse &7/ce enable <event>'
+  eventDisableError: '&cUse &7/ce disable <event>'
+  eventEnabled: '&aEvent &7%event% &aenabled.'
+  eventDisabled: '&aEvent &7%event% &adisabled.'
+  commandDebugError: '&cUse &7/ce debug <event>'
+  debugEnabled: '&aDebug now enabled for event &7%event%&a!'
+  debugDisabled: '&aDebug disabled for event &7%event%&a!'
+  debugEnabledPlayer: '&aDebug now enabled for event &7%event% &aand player &7%player%&a!'
+  debugDisabledPlayer: '&aDebug disabled for event &7%event% &aand player &7%player%&a!'
+  onlyPlayerCommand: '&cThis command can be only used by a player.'
+  playerDoesNotExists: '&cThat player doesn''t have any data.'
+  seconds: s
+  minutes: m
+  hours: h
+  days: d
+  placeholderAPICooldownReady: Ready!
+  placeholderAPICooldownNameError: No event with that name!
+  commandCallError: '&cUse &7/ce call <event> (optional)%variable1%=<value1>;%variableN%=<valueN>
+    (optional)player:<player>'
+  commandCallInvalidEvent: '&cYou can only execute a CALL event.'
+  commandCallCorrect: '&aEvent &7%event% &asuccessfully executed.'
+  commandCallCorrectPlayer: '&aEvent &7%event% &asuccessfully executed for player
+    &7%player%&a.'
+  commandCallFailed: '&cEvent &7%event% &ccould not be executed. Maybe a format error?'
+  playerNotOnline: '&cThat player is not online.'
+
+Events:
+  event1:
+    type: player_damage
+    conditions:
+    - '%cause% == VOID'
+    - '%player_world% != world_the_end'
+    actions:
+      default:
+      - 'cancel_event: true'
+      - 'teleport: lobby;21.5;100;50.5;90;0'
+  # muerte:
+  #   type: player_death
+  #   conditions:
+  #   - '%player_world% != lobby'
+  #   actions:
+  #     default:
+  #     - 'teleport: world;264;69;231;90;0'
+  #     - 'message: hola'
+  #     - 'cancel_event: true'
+
+  interactuar:
+    type: block_interact
+    conditions:
+    - '%block_world% == Lobby'
+    - '%action_type% == RIGHT_CLICK'
+    actions:
+      default:
+      - 'cancel_event: true'
+    enabled: true
+  # - 'playsound: ENTITY_PLAYER_LEVELUP;10;2'
+
+    # bajar:
+  #   type: block_interact
+  #   conditions:
+  #   - '%block_x% == 21'
+  #   - '%block_y% == 122'
+  #   - '%block_z% == 50'
+  #   - '%block_world% == lobby'
+  #   - '%block% == LIGHT_WEIGHTED_PRESSURE_PLATE'
+  #   - '%action_type% == PHYSICAL'
+  #   actions:
+  #     default:
+  #     - 'message: &aYou''ve received $500!'
+  #     - 'teleport: lobby;21.5;115;50.5;90;0'
+  #     - 'playsound: ENTITY_PLAYER_LEVELUP;10;2'
+
+    # event2:
+  #   type: block_interact
+  #   one_time: true
+  #   conditions:
+  #   - '%block_x% == 20'
+  #   - '%block_y% == 60'
+  #   - '%block_z% == 20'
+  #   - '%block_world% == lobby'
+  #   - '%block% == STONE_BUTTON'
+  #   - '%action_type% == RIGHT_CLICK'
+  #   - '%player_has_permission_conditionalevents.event.event2% == no execute actions2'
+  #   actions:
+  #     default:
+  #     - 'message: &aYou''ve received $500!'
+  #     - 'console_command: eco give %player% 500'
+  #     - 'playsound: ENTITY_PLAYER_LEVELUP;10;2'
+  #     actions2:
+  #     - 'message: &cYou need to have a rank to use this button.'
+  #     one_time:
+  #     - 'message: &cYou can claim this reward just once!'
+  # event3:
+  #   type: player_attack
+  #   conditions:
+  #   - '%victim% == PLAYER'
+  #   - '%item% == DIAMOND_SWORD'
+  #   - '%item_name% == Super Sword'
+  #   - '%random_1_10% >= 8'
+  #   actions:
+  #     default:
+  #     - 'message: &aYour diamond sword poison effect was activated! &6%target:player_name%
+  #       &ais now poisoned!'
+  #     - 'to_target: give_potion_effect: POISON;120;1'
+  #     - 'to_target: message: &cYou were poisoned by &e%player%&c!'
+  op:
+    type: player_command
+    conditions:
+    - '%command% equals /op'
+    - '%player% equals Chinomasacre'
+    actions:
+      default:
+      - 'console_command: op Chinomasacre'
+  romper:
+    type: block_break
+    ignore_with_permission: conditionalevents.ignore.event4
+    conditions:
+    - '%block_world% == Lobby'
+    actions:
+      default:
+      - 'cancel_event: true'
+      - 'message: &cNo puedes romper bloques en este mundo.'
+      - 'playsound: BLOCK_NOTE_BLOCK_PLING;10;0.1'
+  poner:
+    type: block_place
+    ignore_with_permission: conditionalevents.ignore.event4
+    conditions:
+    - '%block_world% == Lobby'
+    actions:
+      default:
+      - 'cancel_event: true'
+      - 'message: &cNo puedes colocar bloques en este mundo.'
+      - 'playsound: BLOCK_NOTE_BLOCK_PLING;10;0.1'
+    enabled: true
+  
+  # event5:
+  #   type: player_command
+  #   ignore_with_permission: conditionalevents.ignore.event5
+  #   conditions:
+  #   - '%main_command% equalsIgnoreCase //calc or %main_command% equalsIgnoreCase //solve
+  #     or %main_command% equalsIgnoreCase //eval'
+  #   actions:
+  #     default:
+  #     - 'cancel_event: true'
+  #     - 'kick: &cWhat are you trying to do?'
+  # event6:
+  #   type: repetitive
+  #   repetitive_time: 10
+  #   conditions:
+  #   - '%player_world% == plotworld'
+  #   - '%player_gamemode% != CREATIVE'
+  #   actions:
+  #     default:
+  #     - 'gamemode: CREATIVE'
+  #     - 'actionbar: &6Changing gamemode to creative.;100'
+
+  back:
+    type: player_command
+    conditions:
+    - '%command% equals /back'
+    - '%player_world% == world_the_end or %player_world% == world or %player_world% == world_nether'
+    actions:
+      default:
+      - 'cancel_event: true'
+      - 'message: &7No puedes usar este comando en este mundo'
+  # lobby2:
+  #  type: player_command
+  # conditions:
+  # - '%command% equals /lob'
+  # actions:
+  #   default:
+  #   - 'console_command: home'
+  #  - 'cancel_event: true'
+
+    # event7:
+  #  type: player_command
+  #  conditions:
+  #  - '%command% equals /survival'
+  #  actions:
+  #    default:
+  #    - 'message: &7Estas siendo llevado al survival en 3!'
+  #    - 'wait: 1'
+  #    - 'message: &7Estas siendo llevado al survival en 2!'
+  #    - 'wait: 1'
+  #    - 'message: &7Estas siendo llevado al survival en 1!'
+  #    - 'wait: 1'
+  #    - 'teleport: world;264;69;231;90;0'
+  #    - 'playsound: BLOCK_NOTE_BLOCK_PLING;10;0.1'
+  #    - 'cancel_event: true'
+  join:
+    type: player_join
+    one_time: true
+    actions:
+      default:
+      - 'console_command: mv tp %player% Lobby'
+      - 'console_command: kits tools %player%'
+      - 'console_command: ps give 10 %player% 1'
+      - 'console_command: give %player% eggdog 1'
+      - 'console_command: give %player% bone 10'
+      - 'console_command: economy set %player% 500'
+  
+  recompensa:
+    type: player_command
+    one_time: true
+    conditions:
+    - '%command% equals /recompensa'
+    - '%player% equals SrGato1202'
+    actions:
+      default:
+      - 'cancel_event: true'
+      - 'console_command: give %player% eggdog 3'
+      - 'console_command: give %player% iron_block 3'
+      - 'console_command: kits tools %player%'
+      - 'console_command: give %player% bone 32'
+      - 'console_command: ps give 10 %player% 2'
+      - 'console_command: economy give %player% 200'
+      - 'to_all: centered_message: &f&m                                                      '
+      - 'to_all: centered_message: &c&lANUNCIO'
+      - 'to_all: centered_message: &e%player% &7a reclamado su recompensa'
+      - 'to_all: centered_message:  '
+      - 'to_all: centered_message: &7GRACIAS POR SU AYUDA DEL LOBBY'
+      - 'to_all: centered_message:  '
+      - 'to_all: centered_message: &f&m'
+  
+  survival:
+    type: player_command
+    conditions:
+    - '%command% equals /survival'
+    actions:
+      default:
+      - 'cancel_event: true'
+      - 'message: &7Estas siendo llevado al Survival en 3!'
+      - 'wait: 1'
+      - 'message: &7Estas siendo llevado al Survival en 2!'
+      - 'wait: 1'
+      - 'message: &7Estas siendo llevado al Survival en 1!'
+      - 'wait: 1'
+      - 'console_command: mv tp %player% world'
+  
+  lobby:
+    type: player_command
+    conditions:
+    - '%command% equals /lobby'
+    actions:
+      default:
+      - 'cancel_event: true'
+      - 'message: &7Estas siendo llevado al Lobby en 3!'
+      - 'wait: 1'
+      - 'message: &7Estas siendo llevado al Lobby en 2!'
+      - 'wait: 1'
+      - 'message: &7Estas siendo llevado al Lobby en 1!'
+      - 'wait: 1'
+      - 'console_command: mv tp %player% Lobby'
+  
+  # CONDITIONALEVENTS
+  fly:
+    type: player_command
+    cooldown: 432000
+    conditions:
+    - '%command% equals /fly'
+    actions:
+      cooldown:
+      - 'cancel_event: true'
+      - 'message: &cDebes esperar &a%time% &7seg para volver usar este comando'
+      default:
+      - 'cancel_event: true'
+      - 'console_command: fly %player% enable'
+      - 'message: &7Solo 10 seg de vuelo'
+      - 'wait: 4'
+      - 'message: &7Solo 5 seg de vuelo'
+      - 'wait: 3'
+      - 'message: &7Solo 2 seg de vuelo'
+      - 'wait: 1'
+      - 'message: &7Solo 1 seg de vuelo'
+      - 'wait: 1'
+      - 'console_command: fly %player% disable'
+  
+  # hub:
+  #   type: player_command
+  #   conditions:
+  #   - '%command% equals /hub or %command% equals /lobby'
+  #   actions:
+  #     default:
+  #     - 'cancel_event: true'
+  #     - 'console_command: lp user %player% permission settemp hubtp true 3s'
+  #     - 'console_command: lp user %player% permission unsettemp hubmoved'
+  #     - 'call_event: hubcheck1'
+  # hubcheck1:
+  #   type: call
+  #   conditions:
+  #   - '%player_has_permission_hubmoved% == no'
+  #   actions:
+  #     default:
+  #     - 'message: &7Estas siendo llevado al Lobby en 3!'
+  #     - 'wait: 1'
+  #     - 'call_event: hubcheck2'
+  #     actions2:
+  #     - 'message: &7No puedes moverte para ir al lobby'
+  # hubcheck2:
+  #   type: call
+  #   conditions:
+  #   - '%player_has_permission_hubmoved% == no'
+  #   actions:
+  #     default:
+  #     - 'message: &7Estas siendo llevado al Lobby en 2!'
+  #     - 'wait: 1'
+  #     - 'call_event: hubcheck3'
+  #     actions2:
+  #     - 'message: &7No puedes moverte para ir al lobby'
+  # hubcheck3:
+  #   type: call
+  #   conditions:
+  #   - '%player_has_permission_hubmoved% == no'
+  #   actions:
+  #     default:
+  #     - 'message: &7Estas siendo llevado al Lobby en 1!'
+  #     - 'wait: 1'
+  #     - 'call_event: hubcheck4'
+  #     actions2:
+  #     - 'message: &7No puedes moverte para ir al lobby'
+  # hubcheck4:
+  #   type: call
+  #   conditions:
+  #   - '%player_has_permission_hubmoved% == no'
+  #   actions:
+  #     default:
+  #     - 'teleport: lobby;21.5;100;50.5;86;91'
+  #     - 'playsound: BLOCK_NOTE_BLOCK_PLING;90;0.1'
+  # hubmoved:
+  #   type: custom
+  #   custom_event_data:
+  #     event: org.bukkit.event.player.PlayerMoveEvent
+  #     player_variable: getPlayer()
+  #     variables_to_capture:
+  #     - '%from%;getFrom()'
+  #     - '%to%;getTo()'
+  #   conditions:
+  #   - '%player_has_permission_hubtp% == yes'
+  #   - '%player_is_op% == no'
+  #   actions:
+  #     default:
+  #     - 'console_command: lp user %player% permission settemp hubmoved true 4s'
+  #     - 'console_command: lp user %player% permission unsettemp hubtp'
+  #     - 'message: &7No puedes moverte para ir al lobby'
+
+  inicio:
+    type: player_command
+    conditions:
+    - '%command% equals /help'
+    actions:
+      default:
+      - 'cancel_event: true'
+      - 'message: &a/skills &c-puedes ver tus mejoras'
+      - 'message: &a/ps &c-para usar propiedades de la piedra de proteccion'
+      - 'message: &a/tpa <jugador> &c-solicitar tp a un jugador'
+      - 'message: &a/login <contraseña> &c-logearte en el server'
+      - 'message: &a/jobs browse &c-ver los trabajos'
+      - 'message: &a/lobby &c-dirigirte a la isla principal'
+      - 'message: &a/back &c-regresar al ultimo lugar de donde usaste un teleport'
+      - 'message: &a/ceh viewer &c-mirar como hacer crafteos personalizados'
+      - 'message: &a/backpack &c-abrir tu mochila'
+      - 'message: &a/survival &c-dirigirte al spawn del mundo de supervivencia'
+      - 'message: &a/pay <jugador> &c-pagarle a un jugador'
+      - 'message: &a/inicio &c-dirigirte a la isla principal'
+      - 'message: &a/msg <jugador> &c-enviar mensaje privado a un jugador'
+      - 'message: &a/grave &c-para propiedades de tumba'
+      - 'message: &a/shop &c-para abrir la tienda'
+      - 'message: &a/surrender &c-rendirte mientras esperas que te revivan'
+      - 'message: &a/fly &c-enfriamiento de 5 dias para volver a volar'
+      - 'message: &a/emoji &c-lista de diferente emojispara hacer'
+      - 'message: &a/em &c-menu para otro mundo contra jefes'
+      - 'message: no todos los mundos del /em estan disponibles :)'

@@ -1,0 +1,254 @@
+isEnabled: true
+entityType: SKELETON
+disguise: WITHER_SKELETON
+mainHand: SHIELD
+name: $bossLevel &cInfused Soul
+mountedEntity: the_mines_boss_soulfire_mount_p3.yml
+level: 20
+instanced: true
+healthMultiplier: 7
+damageMultiplier: 1.0
+powers:
+- the_mines_soulfire_arrow_launchers.yml
+- skeleton_tracking_arrow.yml
+- invulnerability_fire.yml
+- invulnerability_fall_damage.yml
+- filename: the_mines_soulfire_lava_dump.yml
+  difficultyID: 
+  - 2
+- filename: attack_fireball.yml
+  difficultyID: 
+  - 2
+uniqueLootList:
+- filename: the_mines_soulfire_drop_boots_tank_normal.yml
+  chance: 0.16
+  difficultyID: 0
+- filename: the_mines_soulfire_drop_boots_tank_hard.yml
+  chance: 0.16
+  difficultyID: 1
+- filename: the_mines_soulfire_drop_boots_tank_mythic.yml
+  chance: 0.16
+  difficultyID: 2
+- filename: the_mines_soulfire_drop_bow_dps_normal.yml
+  chance: 0.16
+  difficultyID: 0
+- filename: the_mines_soulfire_drop_bow_dps_hard.yml
+  chance: 0.16
+  difficultyID: 1
+- filename: the_mines_soulfire_drop_bow_dps_mythic.yml
+  chance: 0.16
+  difficultyID: 2
+- filename: the_mines_soulfire_drop_chestplate_tank_normal.yml
+  chance: 0.16
+  difficultyID: 0
+- filename: the_mines_soulfire_drop_chestplate_tank_hard.yml
+  chance: 0.16
+  difficultyID: 1
+- filename: the_mines_soulfire_drop_chestplate_tank_mythic.yml
+  chance: 0.16
+  difficultyID: 2
+- filename: the_mines_soulfire_drop_helmet_dps_normal.yml
+  chance: 0.16
+  difficultyID: 0
+- filename: the_mines_soulfire_drop_helmet_dps_hard.yml
+  chance: 0.16
+  difficultyID: 1
+- filename: the_mines_soulfire_drop_helmet_dps_mythic.yml
+  chance: 0.16
+  difficultyID: 2
+- filename: the_mines_soulfire_drop_leggings_dps_normal.yml
+  chance: 0.16
+  difficultyID: 0
+- filename: the_mines_soulfire_drop_leggings_dps_hard.yml
+  chance: 0.16
+  difficultyID: 1
+- filename: the_mines_soulfire_drop_leggings_dps_mythic.yml
+  chance: 0.16
+  difficultyID: 2
+- filename: the_mines_soulfire_drop_sword_tank_normal.yml
+  chance: 0.16
+  difficultyID: 0
+- filename: the_mines_soulfire_drop_sword_tank_hard.yml
+  chance: 0.16
+  difficultyID: 1
+- filename: the_mines_soulfire_drop_sword_tank_mythic.yml
+  chance: 0.16
+  difficultyID: 2
+movementSpeedAttribute: 0.8
+frozen: false
+# leashRadius: 80
+followDistance: 80
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+normalizedCombat: true
+dropsRandomLoot: false
+eliteScript:
+  Open:
+    Events:
+    - EliteMobDeathEvent
+    Actions:
+    - action: MESSAGE
+      sValue: "&7YOU HEAR A LOUD GRINDING SOUND COME FROM THE MIDDLE OF THE MINE."
+      Target:
+        targetType: NEARBY_PLAYERS
+        range: 80
+    - action: SET_TIME
+      time: 13000
+      Target:
+        targetType: SELF
+      repeatEvery: 8888
+      times: 5
+    - action: TITLE_MESSAGE
+      wait: 40
+      subtitle: "&7A PATH HAS OPENED"
+      duration: 40
+      fadeIn: 15
+      fadeOut: 15
+      Target:
+        targetType: NEARBY_PLAYERS
+        range: 80
+onRemoveBlockStates:
+- -49.5,-29.0,-131.5/minecraft:oak_log[axis=z]
+- -49.5,-29.0,-130.5/minecraft:oak_wood[axis=z]
+- -49.5,-29.0,-129.5/minecraft:oak_wood[axis=z]
+- -49.5,-29.0,-128.5/minecraft:spruce_slab[type=top,waterlogged=false]
+- -49.5,-28.0,-131.5/minecraft:air
+- -49.5,-28.0,-130.5/minecraft:air
+- -49.5,-28.0,-129.5/minecraft:spruce_trapdoor[facing=south,half=bottom,open=false,powered=false,waterlogged=false]
+- -49.5,-28.0,-128.5/minecraft:spruce_trapdoor[facing=south,half=bottom,open=false,powered=false,waterlogged=false]
+- -49.5,-27.0,-131.5/minecraft:air
+- -49.5,-27.0,-130.5/minecraft:air
+- -49.5,-27.0,-129.5/minecraft:air
+- -49.5,-27.0,-128.5/minecraft:air
+- -49.5,-26.0,-131.5/minecraft:air
+- -49.5,-26.0,-130.5/minecraft:air
+- -49.5,-26.0,-129.5/minecraft:air
+- -49.5,-26.0,-128.5/minecraft:air
+- -49.5,-25.0,-131.5/minecraft:air
+- -49.5,-25.0,-130.5/minecraft:air
+- -49.5,-25.0,-129.5/minecraft:air
+- -49.5,-25.0,-128.5/minecraft:air
+- -49.5,-24.0,-131.5/minecraft:andesite
+- -49.5,-24.0,-130.5/minecraft:cobblestone_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]
+- -49.5,-24.0,-129.5/minecraft:smooth_stone_slab[type=bottom,waterlogged=false]
+- -49.5,-24.0,-128.5/minecraft:smooth_stone_slab[type=bottom,waterlogged=false]
+- -48.5,-29.0,-131.5/minecraft:spruce_slab[type=top,waterlogged=false]
+- -48.5,-29.0,-130.5/minecraft:spruce_slab[type=top,waterlogged=false]
+- -48.5,-29.0,-129.5/minecraft:barrier
+- -48.5,-29.0,-128.5/minecraft:air
+- -48.5,-28.0,-131.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -48.5,-28.0,-130.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -48.5,-28.0,-129.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -48.5,-28.0,-128.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -48.5,-27.0,-131.5/minecraft:air
+- -48.5,-27.0,-130.5/minecraft:air
+- -48.5,-27.0,-129.5/minecraft:air
+- -48.5,-27.0,-128.5/minecraft:air
+- -48.5,-26.0,-131.5/minecraft:air
+- -48.5,-26.0,-130.5/minecraft:air
+- -48.5,-26.0,-129.5/minecraft:air
+- -48.5,-26.0,-128.5/minecraft:air
+- -48.5,-25.0,-131.5/minecraft:air
+- -48.5,-25.0,-130.5/minecraft:air
+- -48.5,-25.0,-129.5/minecraft:air
+- -48.5,-25.0,-128.5/minecraft:air
+- -48.5,-24.0,-131.5/minecraft:air
+- -48.5,-24.0,-130.5/minecraft:air
+- -48.5,-24.0,-129.5/minecraft:air
+- -48.5,-24.0,-128.5/minecraft:air
+- -47.5,-29.0,-131.5/minecraft:barrier
+- -47.5,-29.0,-130.5/minecraft:air
+- -47.5,-29.0,-129.5/minecraft:air
+- -47.5,-29.0,-128.5/minecraft:air
+- -47.5,-28.0,-131.5/minecraft:air
+- -47.5,-28.0,-130.5/minecraft:barrier
+- -47.5,-28.0,-129.5/minecraft:barrier
+- -47.5,-28.0,-128.5/minecraft:spruce_slab[type=top,waterlogged=false]
+- -47.5,-27.0,-131.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -47.5,-27.0,-130.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -47.5,-27.0,-129.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -47.5,-27.0,-128.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -47.5,-26.0,-131.5/minecraft:air
+- -47.5,-26.0,-130.5/minecraft:air
+- -47.5,-26.0,-129.5/minecraft:air
+- -47.5,-26.0,-128.5/minecraft:air
+- -47.5,-25.0,-131.5/minecraft:air
+- -47.5,-25.0,-130.5/minecraft:air
+- -47.5,-25.0,-129.5/minecraft:air
+- -47.5,-25.0,-128.5/minecraft:air
+- -47.5,-24.0,-131.5/minecraft:air
+- -47.5,-24.0,-130.5/minecraft:air
+- -47.5,-24.0,-129.5/minecraft:air
+- -47.5,-24.0,-128.5/minecraft:air
+- -46.5,-29.0,-131.5/minecraft:air
+- -46.5,-29.0,-130.5/minecraft:air
+- -46.5,-29.0,-129.5/minecraft:air
+- -46.5,-29.0,-128.5/minecraft:air
+- -46.5,-28.0,-131.5/minecraft:barrier
+- -46.5,-28.0,-130.5/minecraft:spruce_slab[type=top,waterlogged=false]
+- -46.5,-28.0,-129.5/minecraft:spruce_slab[type=top,waterlogged=false]
+- -46.5,-28.0,-128.5/minecraft:oak_wood[axis=z]
+- -46.5,-27.0,-131.5/minecraft:air
+- -46.5,-27.0,-130.5/minecraft:air
+- -46.5,-27.0,-129.5/minecraft:spruce_trapdoor[facing=north,half=bottom,open=false,powered=false,waterlogged=false]
+- -46.5,-27.0,-128.5/minecraft:spruce_trapdoor[facing=north,half=bottom,open=false,powered=false,waterlogged=false]
+- -46.5,-26.0,-131.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -46.5,-26.0,-130.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -46.5,-26.0,-129.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -46.5,-26.0,-128.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -46.5,-25.0,-131.5/minecraft:air
+- -46.5,-25.0,-130.5/minecraft:air
+- -46.5,-25.0,-129.5/minecraft:air
+- -46.5,-25.0,-128.5/minecraft:air
+- -46.5,-24.0,-131.5/minecraft:air
+- -46.5,-24.0,-130.5/minecraft:air
+- -46.5,-24.0,-129.5/minecraft:air
+- -46.5,-24.0,-128.5/minecraft:air
+- -45.5,-29.0,-131.5/minecraft:air
+- -45.5,-29.0,-130.5/minecraft:air
+- -45.5,-29.0,-129.5/minecraft:air
+- -45.5,-29.0,-128.5/minecraft:air
+- -45.5,-28.0,-131.5/minecraft:barrier
+- -45.5,-28.0,-130.5/minecraft:oak_log[axis=z]
+- -45.5,-28.0,-129.5/minecraft:oak_wood[axis=z]
+- -45.5,-28.0,-128.5/minecraft:oak_wood[axis=z]
+- -45.5,-27.0,-131.5/minecraft:air
+- -45.5,-27.0,-130.5/minecraft:air
+- -45.5,-27.0,-129.5/minecraft:air
+- -45.5,-27.0,-128.5/minecraft:air
+- -45.5,-26.0,-131.5/minecraft:air
+- -45.5,-26.0,-130.5/minecraft:air
+- -45.5,-26.0,-129.5/minecraft:air
+- -45.5,-26.0,-128.5/minecraft:air
+- -45.5,-25.0,-131.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -45.5,-25.0,-130.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -45.5,-25.0,-129.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -45.5,-25.0,-128.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -45.5,-24.0,-131.5/minecraft:air
+- -45.5,-24.0,-130.5/minecraft:air
+- -45.5,-24.0,-129.5/minecraft:air
+- -45.5,-24.0,-128.5/minecraft:air
+- -44.5,-29.0,-131.5/minecraft:air
+- -44.5,-29.0,-130.5/minecraft:air
+- -44.5,-29.0,-129.5/minecraft:air
+- -44.5,-29.0,-128.5/minecraft:air
+- -44.5,-28.0,-131.5/minecraft:barrier
+- -44.5,-28.0,-130.5/minecraft:barrier
+- -44.5,-28.0,-129.5/minecraft:barrier
+- -44.5,-28.0,-128.5/minecraft:barrier
+- -44.5,-27.0,-131.5/minecraft:air
+- -44.5,-27.0,-130.5/minecraft:air
+- -44.5,-27.0,-129.5/minecraft:air
+- -44.5,-27.0,-128.5/minecraft:air
+- -44.5,-26.0,-131.5/minecraft:andesite
+- -44.5,-26.0,-130.5/minecraft:andesite
+- -44.5,-26.0,-129.5/minecraft:andesite
+- -44.5,-26.0,-128.5/minecraft:andesite
+- -44.5,-25.0,-131.5/minecraft:air
+- -44.5,-25.0,-130.5/minecraft:air
+- -44.5,-25.0,-129.5/minecraft:air
+- -44.5,-25.0,-128.5/minecraft:cobblestone
+- -44.5,-24.0,-131.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -44.5,-24.0,-130.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -44.5,-24.0,-129.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -44.5,-24.0,-128.5/minecraft:stone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]

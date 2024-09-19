@@ -1,0 +1,264 @@
+recipe1:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: Street Lamp
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - WHITE_CARPET
+  - LANTERN
+  - WHITE_CARPET
+  - null
+  - IRON_BARS
+  - null
+  - null
+  - ARMOR_STAND
+  - null
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe2:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: Cama para no dormir
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - OAK_LOG
+  - null
+  - null
+  - WHITE_WOOL
+  - WHITE_WOOL
+  - WHITE_WOOL
+  - OAK_LOG
+  - OAK_LOG
+  - OAK_LOG
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe3:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: cañon
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - null
+  - IRON_INGOT
+  - null
+  - SHIELD
+  - IRON_INGOT
+  - SHIELD
+  - OAK_PLANKS
+  - null
+  - OAK_PLANKS
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe4:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: bañera
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - null
+  - null
+  - null
+  - QUARTZ_BRICKS
+  - null
+  - QUARTZ_BRICKS
+  - QUARTZ_BRICKS
+  - QUARTZ_BRICKS
+  - QUARTZ_BRICKS
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe5:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: Banco de madera
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - OAK_SLAB
+  - OAK_SLAB
+  - OAK_SLAB
+  - OAK_SLAB
+  - OAK_SLAB
+  - OAK_SLAB
+  - OAK_FENCE
+  - null
+  - OAK_FENCE
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe6:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: Cortina de baño
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - IRON_BARS
+  - IRON_BARS
+  - IRON_BARS
+  - WHITE_CARPET
+  - WHITE_CARPET
+  - WHITE_CARPET
+  - WHITE_CARPET
+  - WHITE_CARPET
+  - WHITE_CARPET
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe7:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: Sofa
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - WHITE_WOOL
+  - WHITE_CARPET
+  - WHITE_WOOL
+  - WHITE_WOOL
+  - WHITE_WOOL
+  - WHITE_WOOL
+  - OAK_PLANKS
+  - OAK_PLANKS
+  - OAK_PLANKS
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe8:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: mesa de campo
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - ACACIA_SLAB
+  - ACACIA_SLAB
+  - ACACIA_SLAB
+  - ACACIA_LOG
+  - ACACIA_LOG
+  - ACACIA_LOG
+  - ACACIA_SLAB
+  - ACACIA_LOG
+  - ACACIA_SLAB
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe9:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: Cagadero
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - QUARTZ_BLOCK
+  - null
+  - null
+  - QUARTZ_BLOCK
+  - QUARTZ_SLAB
+  - QUARTZ_SLAB
+  - null
+  - QUARTZ_BLOCK
+  - QUARTZ_BLOCK
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe10:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: lavamanos
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - null
+  - LIGHT_BLUE_WOOL
+  - null
+  - null
+  - QUARTZ_BLOCK
+  - null
+  - null
+  - QUARTZ_SLAB
+  - null
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe11:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: Espantapajaros
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - WHEAT
+  - CARVED_PUMPKIN
+  - WHEAT
+  - LEATHER_CHESTPLATE
+  - OAK_FENCE
+  - LEATHER_LEGGINGS
+  - WHEAT
+  - OAK_FENCE
+  - WHEAT
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false
+recipe12:
+  ==: com.dutchjelly.craftenhance.crafthandling.recipes.WBRecipe
+  result: hoguera
+  oncraftcommand: null
+  hidden: false
+  matchtype: MATCH_META
+  recipe:
+  - COBBLED_DEEPSLATE
+  - COBBLED_DEEPSLATE
+  - QUARTZ_BLOCK
+  - COBBLED_DEEPSLATE
+  - BLACK_STAINED_GLASS_PANE
+  - QUARTZ_BLOCK
+  - COBBLED_DEEPSLATE
+  - CAMPFIRE
+  - QUARTZ_BLOCK
+  permission: null
+  page: -1
+  slot: -1
+  result_slot: 9
+  category: default
+  shapeless: false

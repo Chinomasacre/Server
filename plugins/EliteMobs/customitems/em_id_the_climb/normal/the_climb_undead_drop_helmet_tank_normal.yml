@@ -1,0 +1,9 @@
+isEnabled: true
+material: DIAMOND_HELMET
+name: "&eUndead's Headgear"
+lore:
+- '&eRetrieved from the walking corpse.'
+enchantments: 
+- "PROTECTION_ENVIRONMENTAL,2"
+itemType: unique
+level: 10

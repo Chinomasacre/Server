@@ -1,0 +1,14 @@
+isEnabled: true
+entityType: CAVE_SPIDER
+name: $reinforcementLevel &4Soul Splintering
+level: 20
+instanced: true
+healthMultiplier: 0.25
+damageMultiplier: 0.10
+frozen: false
+# leashRadius: 30
+followDistance: 30
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+normalizedCombat: true
+dropsRandomLoot: false

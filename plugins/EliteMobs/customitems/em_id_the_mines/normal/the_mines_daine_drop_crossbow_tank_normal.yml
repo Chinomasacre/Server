@@ -1,0 +1,13 @@
+name: "&fBolt Launcher"
+material: CROSSBOW
+level: 20
+lore:
+- "&fYou can run but you cannot dodge."
+enchantments:
+- PIERCING,5
+- MULTISHOT,3
+- DAMAGE_ALL,2
+potionEffects:
+- GLOWING,0,self,continuous
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

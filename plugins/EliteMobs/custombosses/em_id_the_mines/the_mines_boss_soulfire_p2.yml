@@ -1,0 +1,28 @@
+isEnabled: true
+entityType: SKELETON
+disguise: WITHER_SKELETON
+mainHand: BOW
+name: $bossLevel &cInfused Soul
+mountedEntity: the_mines_boss_soulfire_mount_p2.yml
+level: 20
+instanced: true
+healthMultiplier: 7
+damageMultiplier: 1.0
+powers:
+- the_mines_soulfire_arrow_launchers.yml
+- invulnerability_fire.yml
+- invulnerability_fall_damage.yml
+- filename: the_mines_soulfire_flame_pillars.yml
+  difficultyID:
+  - 1
+- filename: attack_fireball.yml
+  difficultyID: 
+  - 2
+movementSpeedAttribute: 0.8
+frozen: false
+# leashRadius: 80
+followDistance: 80
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+normalizedCombat: true
+dropsRandomLoot: false

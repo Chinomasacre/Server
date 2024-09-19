@@ -1,0 +1,12 @@
+name: "&2Muddy Boots"
+material: DIAMOND_BOOTS
+level: 20
+lore:
+- "&2You should wash these..."
+enchantments:
+- PROTECTION_FALL,3
+- PROTECTION_ENVIRONMENTAL,2
+- LOUD_STRIKES,2
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

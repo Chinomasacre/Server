@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.71.226.76
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1719797939656
+  login: 1719797617057
+money: '8021.5974500000000440'
+last-account-name: srkimich
+lastlocation:
+  world: 99a0f00b-2fd8-418f-80f2-7f584e8fade3
+  world-name: world
+  x: -7.440087251012014
+  y: 72.0
+  z: -13.165346195994134
+  yaw: 166.50286865234375
+  pitch: 29.3681697845459
+logoutlocation:
+  world: 99a0f00b-2fd8-418f-80f2-7f584e8fade3
+  world-name: world
+  x: -905.110883397989
+  y: 70.0
+  z: 23.61040768826577
+  yaw: -120.617919921875
+  pitch: 10.106709480285645

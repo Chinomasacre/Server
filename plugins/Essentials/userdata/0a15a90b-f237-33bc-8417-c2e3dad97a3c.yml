@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 181.132.8.176
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1722450476538
+  login: 1722450394198
+money: '6842.98165000000016823'
+last-account-name: ElGabus
+lastlocation:
+  world: 99a0f00b-2fd8-418f-80f2-7f584e8fade3
+  world-name: world
+  x: 0.0
+  y: 72.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 99a0f00b-2fd8-418f-80f2-7f584e8fade3
+  world-name: world
+  x: 655.5485928518086
+  y: 80.0
+  z: -11626.57510806525
+  yaw: 58.04974365234375
+  pitch: 21.300020217895508

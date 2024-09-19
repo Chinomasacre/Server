@@ -1,0 +1,12 @@
+name: "&cStone Leggings"
+material: DIAMOND_LEGGINGS
+level: 25
+lore:
+- "&cYou feel empowered when putting these on."
+enchantments:
+- DAMAGE_ALL,10
+- DAMAGE_ARTHROPODS,6
+- PROTECTION_ENVIRONMENTAL,5
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

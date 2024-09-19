@@ -1,0 +1,80 @@
+isEnabled: true
+entityType: HUSK
+disguise: ZOMBIFIED_PIGLIN
+name: $normalLevel &eDwarven Miner
+level: 30
+mainHand: DIAMOND_PICKAXE
+offHand: SHIELD
+powers:
+- invulnerability_fall_damage.yml
+- invulnerability_fire.yml
+- invulnerability_arrow.yml
+- frost_cone.yml
+uniqueLootList:
+- filename: em_id_the_city_dwarf_set_one_drop_boots_tank_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_one_drop_chestplate_tank_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_one_drop_helmet_tank_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_one_drop_leggings_tank_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_one_drop_shield_tank_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_one_drop_boots_tank_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_one_drop_chestplate_tank_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_one_drop_helmet_tank_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_one_drop_leggings_tank_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_one_drop_shield_tank_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_one_drop_boots_tank_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_one_drop_chestplate_tank_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_one_drop_helmet_tank_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_one_drop_leggings_tank_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_one_drop_shield_tank_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+onDamageMessages:
+- "I like to dig. Do you like to dig…"
+- "Ha ha ha ha ha ha!"
+instanced: true
+healthMultiplier: 2.4
+damageMultiplier: 0.85
+movementSpeedAttribute: 0.36
+frozen: false
+# leashRadius: 30
+followDistance: 80
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: true
+normalizedCombat: true
+dropsRandomLoot: false
+spawnLocations:
+- em_id_the_city,-10.5,123.5,-98.5,0.0,0.0:1701249228236
+- em_id_the_city,42.5,127.5,-16.5,0.0,0.0:1701249380886
+- em_id_the_city,49.5,128.5,-3.5,0.0,0.0:1701249388390
+- em_id_the_city,85.5,134.5,20.5,0.0,0.0
+- em_id_the_city,156.5,135.5,-14.5,0.0,0.0:1701249569584
+- em_id_the_city,134.5,134.5,-15.5,0.0,0.0:1701249570987

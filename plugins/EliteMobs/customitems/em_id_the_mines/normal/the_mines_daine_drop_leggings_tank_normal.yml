@@ -1,0 +1,13 @@
+name: "&fSpun Netherite Leggings"
+material: NETHERITE_LEGGINGS
+level: 20
+lore:
+- "&fYour legs will be grateful."
+enchantments:
+- PROTECTION_FIRE,5
+- PROTECTION_ENVIRONMENTAL,3
+- PROTECTION_FALL,2
+- LOUD_STRIKES,1
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

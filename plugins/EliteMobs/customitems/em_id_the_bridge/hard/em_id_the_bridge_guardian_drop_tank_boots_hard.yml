@@ -1,0 +1,13 @@
+name: "&eAncient Stone Sabatons"
+material: DIAMOND_BOOTS
+level: 25
+lore:
+- "&eNow everyone will hear you coming."
+enchantments:
+- PROTECTION_ENVIRONMENTAL,7
+- PROTECTION_FALL,5
+- PROTECTION_FIRE,4
+- LOUD_STRIKES,2
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

@@ -1,0 +1,122 @@
+isEnabled: true
+entityType: IRON_GOLEM
+name: $normalLevel &cAncient Guardian
+level: 25
+instanced: true
+healthMultiplier: 25
+damageMultiplier: 0.8
+powers:
+- em_id_the_bridge_lava_fall_p3.yml
+- movement_speed.yml
+- attack_push.yml
+- taze.yml
+- shield_wall.yml
+- filename: em_id_the_bridge_pull_vacuum_p3_normal.yml
+  difficultyID:
+  - 0
+- filename: em_id_the_bridge_pull_vacuum_p3_hard.yml
+  difficultyID:
+  - 1
+- filename: em_id_the_bridge_pull_vacuum_p3_mythic.yml
+  difficultyID:
+  - 2
+uniqueLootList:
+- filename: em_id_the_bridge_guardian_lore.yml
+  chance: 0.99
+- filename: em_id_the_bridge_guardian_drop_dps_boots_normal.yml
+  chance: 0.08
+  difficultyID: 0
+- filename: em_id_the_bridge_guardian_drop_dps_chestplate_normal.yml
+  chance: 0.08
+  difficultyID: 0
+- filename: em_id_the_bridge_guardian_drop_dps_helmet_normal.yml
+  chance: 0.08
+  difficultyID: 0
+- filename: em_id_the_bridge_guardian_drop_dps_leggings_normal.yml
+  chance: 0.08
+  difficultyID: 0
+- filename: em_id_the_bridge_guardian_drop_dps_sword_normal.yml
+  chance: 0.08
+  difficultyID: 0
+- filename: em_id_the_bridge_guardian_drop_tank_axe_normal.yml
+  chance: 0.08
+  difficultyID: 0
+- filename: em_id_the_bridge_guardian_drop_tank_boots_normal.yml
+  chance: 0.08
+  difficultyID: 0
+- filename: em_id_the_bridge_guardian_drop_tank_chestplate_normal.yml
+  chance: 0.08
+  difficultyID: 0
+- filename: em_id_the_bridge_guardian_drop_tank_helmet_normal.yml
+  chance: 0.08
+  difficultyID: 0
+- filename: em_id_the_bridge_guardian_drop_tank_leggings_normal.yml
+  chance: 0.08
+  difficultyID: 0
+- filename: em_id_the_bridge_guardian_drop_dps_boots_hard.yml
+  chance: 0.08
+  difficultyID: 1
+- filename: em_id_the_bridge_guardian_drop_dps_chestplate_hard.yml
+  chance: 0.08
+  difficultyID: 1
+- filename: em_id_the_bridge_guardian_drop_dps_helmet_hard.yml
+  chance: 0.08
+  difficultyID: 1
+- filename: em_id_the_bridge_guardian_drop_dps_leggings_hard.yml
+  chance: 0.08
+  difficultyID: 1
+- filename: em_id_the_bridge_guardian_drop_dps_sword_hard.yml
+  chance: 0.08
+  difficultyID: 1
+- filename: em_id_the_bridge_guardian_drop_tank_axe_hard.yml
+  chance: 0.08
+  difficultyID: 1
+- filename: em_id_the_bridge_guardian_drop_tank_boots_hard.yml
+  chance: 0.08
+  difficultyID: 1
+- filename: em_id_the_bridge_guardian_drop_tank_chestplate_hard.yml
+  chance: 0.08
+  difficultyID: 1
+- filename: em_id_the_bridge_guardian_drop_tank_helmet_hard.yml
+  chance: 0.08
+  difficultyID: 1
+- filename: em_id_the_bridge_guardian_drop_tank_leggings_hard.yml
+  chance: 0.08
+  difficultyID: 1
+- filename: em_id_the_bridge_guardian_drop_dps_boots_mythic.yml
+  chance: 0.08
+  difficultyID: 2
+- filename: em_id_the_bridge_guardian_drop_dps_chestplate_mythic.yml
+  chance: 0.08
+  difficultyID: 2
+- filename: em_id_the_bridge_guardian_drop_dps_helmet_mythic.yml
+  chance: 0.08
+  difficultyID: 2
+- filename: em_id_the_bridge_guardian_drop_dps_leggings_mythic.yml
+  chance: 0.08
+  difficultyID: 2
+- filename: em_id_the_bridge_guardian_drop_dps_sword_mythic.yml
+  chance: 0.08
+  difficultyID: 2
+- filename: em_id_the_bridge_guardian_drop_tank_axe_mythic.yml
+  chance: 0.08
+  difficultyID: 2
+- filename: em_id_the_bridge_guardian_drop_tank_boots_mythic.yml
+  chance: 0.08
+  difficultyID: 2
+- filename: em_id_the_bridge_guardian_drop_tank_chestplate_mythic.yml
+  chance: 0.08
+  difficultyID: 2
+- filename: em_id_the_bridge_guardian_drop_tank_helmet_mythic.yml
+  chance: 0.08
+  difficultyID: 2
+- filename: em_id_the_bridge_guardian_drop_tank_leggings_mythic.yml
+  chance: 0.08
+  difficultyID: 2
+frozen: false
+leashRadius: 110
+followDistance: 110
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+normalizedCombat: true
+dropsRandomLoot: false

@@ -1,0 +1,497 @@
+isEnabled: true
+entityType: EVOKER
+name: $minibossLevel &6Soul Tulpa
+level: 20
+instanced: true
+healthMultiplier: 4.0
+damageMultiplier: 1.4
+powers:
+- filename: the_mines_mini_boss_tulpa_curse.yml
+  difficultyID:
+  - 0
+  - 1
+  - 2
+- filename: the_mines_tulpa_summon.yml
+  difficultyID:
+  - 1
+  - 2
+- attack_freeze.yml
+- attack_poison.yml
+- skeleton_tracking_arrow.yml
+- plasma_blaster.yml
+- invulnerability_knockback.yml
+uniqueLootList:
+- filename: the_mines_tulpa_drop_shield_tank_normal.yml
+  chance: 0.5
+  difficultyID: 0
+- filename: the_mines_tulpa_drop_shield_tank_hard.yml
+  chance: 0.5
+  difficultyID: 1
+- filename: the_mines_tulpa_drop_shield_tank_mythic.yml
+  chance: 0.5
+  difficultyID: 2
+- filename: the_mines_tulpa_drop_trident_normal.yml
+  chance: 0.5
+  difficultyID: 0
+- filename: the_mines_tulpa_drop_trident_hard.yml
+  chance: 0.5
+  difficultyID: 1
+- filename: the_mines_tulpa_drop_trident_mythic.yml
+  chance: 0.5
+  difficultyID: 2
+frozen: false
+# leashRadius: 40
+followDistance: 40
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: true
+normalizedCombat: true
+dropsRandomLoot: false
+movementSpeedAttribute: 0.001
+spawnLocations:
+- em_id_the_mines,233.5,112,27.5,-180.0,0.0:1678101874148
+eliteScript:
+  CloseArena:
+    Events:
+    - EliteMobEnterCombatEvent
+    - EliteMobTargetPlayerEvent
+    Zone:
+      shape: DOME
+      radius: 16
+      borderRadius: 14
+      Target:
+        targetType: SELF_SPAWN
+    Actions:
+    - action: TELEPORT
+      FinalTarget:
+        targetType: LOCATION
+        location: same_as_boss,233.5,111,25.5,0,0
+      Target:
+        targetType: NEARBY_PLAYERS
+        range: 50
+    - action: SPAWN_PARTICLE
+      particles:
+      - particle: EXPLOSION_NORMAL
+      Target:
+        targetType: ZONE_BORDER
+        coverage: 0.1
+      repeatEvery: 10
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    - action: TELEPORT
+      FinalTarget:
+        targetType: LOCATION
+        location: same_as_boss,233.5,111,25.5,0,0
+      Target:
+        targetType: ZONE_BORDER
+      repeatEvery: 5
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    Cooldowns:
+      local: 99999
+      global: 10
+  Sleep:
+    Events:
+    - EliteMobSpawnEvent
+    Actions:
+    - action: SET_MOB_AI
+      bValue: false
+      Target:
+        targetType: SELF
+  WakeUp:
+    Events:
+    - EliteMobDamagedByPlayerEvent
+    Actions:
+    - action: SET_MOB_AI
+      bValue: true
+      Target:
+        targetType: SELF
+  Levitate:
+    Events:
+    - EliteMobDamagedEvent
+    - EliteMobEnterCombatEvent
+    - EliteMobTargetPlayerEvent
+    Zone:
+      shape: CYLINDER
+      radius: 1
+      height: 6
+      Target:
+        targetType: SELF
+        track: true
+      filter: ELITE
+    Actions:
+    - action: SPAWN_PARTICLE
+      particles:
+      - particle: SPELL
+      - particle: SPELL
+        speed: 1
+      Target:
+        targetType: ZONE_FULL
+        track: true
+      Conditions:
+        Target:
+          targetType: SELF
+        isAlive: true
+      repeatEvery: 10
+      times: 20
+    - action: POTION_EFFECT
+      potionEffectType: LEVITATION
+      amplifier: 2
+      duration: 80
+      Target:
+        targetType: SELF
+    - action: POTION_EFFECT
+      potionEffectType: SLOW_FALLING
+      amplifier: 50
+      duration: 120
+      Target:
+        targetType: SELF
+      wait: 80
+    Cooldowns:
+      local: 266
+      global: 60
+  SlowPlayer:
+    Events:
+    - PlayerDamagedByEliteMobEvent
+    Actions:
+    - action: POTION_EFFECT
+      potionEffectType: SLOW
+      amplifier: 2
+      duration: 120
+      Target:
+        targetType: DIRECT_TARGET
+    Cooldowns:
+      local: 100
+      global: 50
+onSpawnBlockStates:
+- -3.5,2.0,31.5/minecraft:orange_stained_glass
+- -3.5,3.0,31.5/minecraft:orange_stained_glass
+- -3.5,4.0,31.5/minecraft:orange_stained_glass
+- -3.5,5.0,31.5/minecraft:orange_stained_glass
+- -3.5,6.0,31.5/minecraft:orange_stained_glass
+- -3.5,7.0,31.5/minecraft:orange_stained_glass
+- -3.5,8.0,31.5/minecraft:orange_stained_glass
+- -3.5,9.0,31.5/minecraft:orange_stained_glass
+- -3.5,10.0,31.5/minecraft:orange_stained_glass
+- -3.5,11.0,31.5/minecraft:orange_stained_glass
+- -3.5,12.0,31.5/minecraft:orange_stained_glass
+- -3.5,13.0,31.5/minecraft:orange_stained_glass
+- -3.5,14.0,31.5/minecraft:orange_stained_glass
+- -3.5,15.0,31.5/minecraft:orange_stained_glass
+- -3.5,16.0,31.5/minecraft:orange_stained_glass
+- -3.5,17.0,31.5/minecraft:orange_stained_glass
+- -3.5,18.0,31.5/minecraft:andesite
+- -2.5,2.0,31.5/minecraft:orange_stained_glass
+- -2.5,3.0,31.5/minecraft:orange_stained_glass
+- -2.5,4.0,31.5/minecraft:orange_stained_glass
+- -2.5,5.0,31.5/minecraft:orange_stained_glass
+- -2.5,6.0,31.5/minecraft:orange_stained_glass
+- -2.5,7.0,31.5/minecraft:orange_stained_glass
+- -2.5,8.0,31.5/minecraft:orange_stained_glass
+- -2.5,9.0,31.5/minecraft:orange_stained_glass
+- -2.5,10.0,31.5/minecraft:orange_stained_glass
+- -2.5,11.0,31.5/minecraft:orange_stained_glass
+- -2.5,12.0,31.5/minecraft:orange_stained_glass
+- -2.5,13.0,31.5/minecraft:orange_stained_glass
+- -2.5,14.0,31.5/minecraft:orange_stained_glass
+- -2.5,15.0,31.5/minecraft:orange_stained_glass
+- -2.5,16.0,31.5/minecraft:orange_stained_glass
+- -2.5,17.0,31.5/minecraft:orange_stained_glass
+- -2.5,18.0,31.5/minecraft:orange_stained_glass
+- -1.5,2.0,31.5/minecraft:orange_stained_glass
+- -1.5,3.0,31.5/minecraft:orange_stained_glass
+- -1.5,4.0,31.5/minecraft:orange_stained_glass
+- -1.5,5.0,31.5/minecraft:orange_stained_glass
+- -1.5,6.0,31.5/minecraft:orange_stained_glass
+- -1.5,7.0,31.5/minecraft:orange_stained_glass
+- -1.5,8.0,31.5/minecraft:orange_stained_glass
+- -1.5,9.0,31.5/minecraft:orange_stained_glass
+- -1.5,10.0,31.5/minecraft:orange_stained_glass
+- -1.5,11.0,31.5/minecraft:orange_stained_glass
+- -1.5,12.0,31.5/minecraft:orange_stained_glass
+- -1.5,13.0,31.5/minecraft:orange_stained_glass
+- -1.5,14.0,31.5/minecraft:orange_stained_glass
+- -1.5,15.0,31.5/minecraft:dark_oak_planks
+- -1.5,16.0,31.5/minecraft:dark_oak_planks
+- -1.5,17.0,31.5/minecraft:dark_oak_planks
+- -1.5,18.0,31.5/minecraft:spruce_wood[axis=y]
+- -0.5,2.0,31.5/minecraft:orange_stained_glass
+- -0.5,3.0,31.5/minecraft:orange_stained_glass
+- -0.5,4.0,31.5/minecraft:orange_stained_glass
+- -0.5,5.0,31.5/minecraft:orange_stained_glass
+- -0.5,6.0,31.5/minecraft:orange_stained_glass
+- -0.5,7.0,31.5/minecraft:orange_stained_glass
+- -0.5,8.0,31.5/minecraft:orange_stained_glass
+- -0.5,9.0,31.5/minecraft:orange_stained_glass
+- -0.5,10.0,31.5/minecraft:orange_stained_glass
+- -0.5,11.0,31.5/minecraft:orange_stained_glass
+- -0.5,12.0,31.5/minecraft:orange_stained_glass
+- -0.5,13.0,31.5/minecraft:orange_stained_glass
+- -0.5,14.0,31.5/minecraft:orange_stained_glass
+- -0.5,15.0,31.5/minecraft:orange_stained_glass
+- -0.5,16.0,31.5/minecraft:orange_stained_glass
+- -0.5,17.0,31.5/minecraft:orange_stained_glass
+- -0.5,18.0,31.5/minecraft:orange_stained_glass
+- 0.5,2.0,31.5/minecraft:orange_stained_glass
+- 0.5,3.0,31.5/minecraft:orange_stained_glass
+- 0.5,4.0,31.5/minecraft:orange_stained_glass
+- 0.5,5.0,31.5/minecraft:orange_stained_glass
+- 0.5,6.0,31.5/minecraft:orange_stained_glass
+- 0.5,7.0,31.5/minecraft:orange_stained_glass
+- 0.5,8.0,31.5/minecraft:orange_stained_glass
+- 0.5,9.0,31.5/minecraft:orange_stained_glass
+- 0.5,10.0,31.5/minecraft:orange_stained_glass
+- 0.5,11.0,31.5/minecraft:orange_stained_glass
+- 0.5,12.0,31.5/minecraft:orange_stained_glass
+- 0.5,13.0,31.5/minecraft:orange_stained_glass
+- 0.5,14.0,31.5/minecraft:orange_stained_glass
+- 0.5,15.0,31.5/minecraft:orange_stained_glass
+- 0.5,16.0,31.5/minecraft:orange_stained_glass
+- 0.5,17.0,31.5/minecraft:orange_stained_glass
+- 0.5,18.0,31.5/minecraft:orange_stained_glass
+- 1.5,2.0,31.5/minecraft:orange_stained_glass
+- 1.5,3.0,31.5/minecraft:orange_stained_glass
+- 1.5,4.0,31.5/minecraft:orange_stained_glass
+- 1.5,5.0,31.5/minecraft:orange_stained_glass
+- 1.5,6.0,31.5/minecraft:orange_stained_glass
+- 1.5,7.0,31.5/minecraft:orange_stained_glass
+- 1.5,8.0,31.5/minecraft:orange_stained_glass
+- 1.5,9.0,31.5/minecraft:orange_stained_glass
+- 1.5,10.0,31.5/minecraft:orange_stained_glass
+- 1.5,11.0,31.5/minecraft:orange_stained_glass
+- 1.5,12.0,31.5/minecraft:orange_stained_glass
+- 1.5,13.0,31.5/minecraft:orange_stained_glass
+- 1.5,14.0,31.5/minecraft:orange_stained_glass
+- 1.5,15.0,31.5/minecraft:orange_stained_glass
+- 1.5,16.0,31.5/minecraft:orange_stained_glass
+- 1.5,17.0,31.5/minecraft:orange_stained_glass
+- 1.5,18.0,31.5/minecraft:orange_stained_glass
+- 2.5,2.0,31.5/minecraft:orange_stained_glass
+- 2.5,3.0,31.5/minecraft:orange_stained_glass
+- 2.5,4.0,31.5/minecraft:orange_stained_glass
+- 2.5,5.0,31.5/minecraft:orange_stained_glass
+- 2.5,6.0,31.5/minecraft:orange_stained_glass
+- 2.5,7.0,31.5/minecraft:orange_stained_glass
+- 2.5,8.0,31.5/minecraft:orange_stained_glass
+- 2.5,9.0,31.5/minecraft:orange_stained_glass
+- 2.5,10.0,31.5/minecraft:orange_stained_glass
+- 2.5,11.0,31.5/minecraft:orange_stained_glass
+- 2.5,12.0,31.5/minecraft:orange_stained_glass
+- 2.5,13.0,31.5/minecraft:orange_stained_glass
+- 2.5,14.0,31.5/minecraft:orange_stained_glass
+- 2.5,15.0,31.5/minecraft:orange_stained_glass
+- 2.5,16.0,31.5/minecraft:orange_stained_glass
+- 2.5,17.0,31.5/minecraft:orange_stained_glass
+- 2.5,18.0,31.5/minecraft:orange_stained_glass
+- 3.5,2.0,31.5/minecraft:orange_stained_glass
+- 3.5,3.0,31.5/minecraft:orange_stained_glass
+- 3.5,4.0,31.5/minecraft:orange_stained_glass
+- 3.5,5.0,31.5/minecraft:orange_stained_glass
+- 3.5,6.0,31.5/minecraft:orange_stained_glass
+- 3.5,7.0,31.5/minecraft:orange_stained_glass
+- 3.5,8.0,31.5/minecraft:orange_stained_glass
+- 3.5,9.0,31.5/minecraft:orange_stained_glass
+- 3.5,10.0,31.5/minecraft:orange_stained_glass
+- 3.5,11.0,31.5/minecraft:orange_stained_glass
+- 3.5,12.0,31.5/minecraft:orange_stained_glass
+- 3.5,13.0,31.5/minecraft:orange_stained_glass
+- 3.5,14.0,31.5/minecraft:orange_stained_glass
+- 3.5,15.0,31.5/minecraft:orange_stained_glass
+- 3.5,16.0,31.5/minecraft:orange_stained_glass
+- 3.5,17.0,31.5/minecraft:orange_stained_glass
+- 3.5,18.0,31.5/minecraft:orange_stained_glass
+- 4.5,2.0,31.5/minecraft:orange_stained_glass
+- 4.5,3.0,31.5/minecraft:orange_stained_glass
+- 4.5,4.0,31.5/minecraft:orange_stained_glass
+- 4.5,5.0,31.5/minecraft:orange_stained_glass
+- 4.5,6.0,31.5/minecraft:orange_stained_glass
+- 4.5,7.0,31.5/minecraft:orange_stained_glass
+- 4.5,8.0,31.5/minecraft:orange_stained_glass
+- 4.5,9.0,31.5/minecraft:orange_stained_glass
+- 4.5,10.0,31.5/minecraft:orange_stained_glass
+- 4.5,11.0,31.5/minecraft:orange_stained_glass
+- 4.5,12.0,31.5/minecraft:orange_stained_glass
+- 4.5,13.0,31.5/minecraft:orange_stained_glass
+- 4.5,14.0,31.5/minecraft:orange_stained_glass
+- 4.5,15.0,31.5/minecraft:orange_stained_glass
+- 4.5,16.0,31.5/minecraft:orange_stained_glass
+- 4.5,17.0,31.5/minecraft:orange_stained_glass
+- 4.5,18.0,31.5/minecraft:orange_stained_glass
+onRemoveBlockStates:
+- -3.5,0.0,31.5/minecraft:andesite
+- -3.5,1.0,31.5/minecraft:cobblestone
+- -3.5,2.0,31.5/minecraft:air
+- -3.5,3.0,31.5/minecraft:air
+- -3.5,4.0,31.5/minecraft:air
+- -3.5,5.0,31.5/minecraft:air
+- -3.5,6.0,31.5/minecraft:air
+- -3.5,7.0,31.5/minecraft:air
+- -3.5,8.0,31.5/minecraft:air
+- -3.5,9.0,31.5/minecraft:air
+- -3.5,10.0,31.5/minecraft:air
+- -3.5,11.0,31.5/minecraft:air
+- -3.5,12.0,31.5/minecraft:air
+- -3.5,13.0,31.5/minecraft:air
+- -3.5,14.0,31.5/minecraft:air
+- -3.5,15.0,31.5/minecraft:air
+- -3.5,16.0,31.5/minecraft:air
+- -3.5,17.0,31.5/minecraft:air
+- -3.5,18.0,31.5/minecraft:andesite
+- -2.5,0.0,31.5/minecraft:andesite
+- -2.5,1.0,31.5/minecraft:dead_brain_coral_block
+- -2.5,2.0,31.5/minecraft:air
+- -2.5,3.0,31.5/minecraft:air
+- -2.5,4.0,31.5/minecraft:air
+- -2.5,5.0,31.5/minecraft:air
+- -2.5,6.0,31.5/minecraft:air
+- -2.5,7.0,31.5/minecraft:air
+- -2.5,8.0,31.5/minecraft:air
+- -2.5,9.0,31.5/minecraft:air
+- -2.5,10.0,31.5/minecraft:air
+- -2.5,11.0,31.5/minecraft:air
+- -2.5,12.0,31.5/minecraft:air
+- -2.5,13.0,31.5/minecraft:air
+- -2.5,14.0,31.5/minecraft:air
+- -2.5,15.0,31.5/minecraft:air
+- -2.5,16.0,31.5/minecraft:air
+- -2.5,17.0,31.5/minecraft:air
+- -2.5,18.0,31.5/minecraft:air
+- -1.5,0.0,31.5/minecraft:dead_brain_coral_block
+- -1.5,1.0,31.5/minecraft:dead_brain_coral_block
+- -1.5,2.0,31.5/minecraft:air
+- -1.5,3.0,31.5/minecraft:air
+- -1.5,4.0,31.5/minecraft:air
+- -1.5,5.0,31.5/minecraft:air
+- -1.5,6.0,31.5/minecraft:air
+- -1.5,7.0,31.5/minecraft:air
+- -1.5,8.0,31.5/minecraft:air
+- -1.5,9.0,31.5/minecraft:air
+- -1.5,10.0,31.5/minecraft:air
+- -1.5,11.0,31.5/minecraft:air
+- -1.5,12.0,31.5/minecraft:air
+- -1.5,13.0,31.5/minecraft:air
+- -1.5,14.0,31.5/minecraft:air
+- -1.5,15.0,31.5/minecraft:dark_oak_planks
+- -1.5,16.0,31.5/minecraft:dark_oak_planks
+- -1.5,17.0,31.5/minecraft:dark_oak_planks
+- -1.5,18.0,31.5/minecraft:spruce_wood[axis=y]
+- -0.5,0.0,31.5/minecraft:dead_brain_coral_block
+- -0.5,1.0,31.5/minecraft:dead_brain_coral_block
+- -0.5,2.0,31.5/minecraft:air
+- -0.5,3.0,31.5/minecraft:air
+- -0.5,4.0,31.5/minecraft:air
+- -0.5,5.0,31.5/minecraft:air
+- -0.5,6.0,31.5/minecraft:air
+- -0.5,7.0,31.5/minecraft:air
+- -0.5,8.0,31.5/minecraft:air
+- -0.5,9.0,31.5/minecraft:air
+- -0.5,10.0,31.5/minecraft:air
+- -0.5,11.0,31.5/minecraft:air
+- -0.5,12.0,31.5/minecraft:air
+- -0.5,13.0,31.5/minecraft:air
+- -0.5,14.0,31.5/minecraft:air
+- -0.5,15.0,31.5/minecraft:air
+- -0.5,16.0,31.5/minecraft:air
+- -0.5,17.0,31.5/minecraft:air
+- -0.5,18.0,31.5/minecraft:air
+- 0.5,0.0,31.5/minecraft:cobblestone
+- 0.5,1.0,31.5/minecraft:dead_brain_coral_block
+- 0.5,2.0,31.5/minecraft:air
+- 0.5,3.0,31.5/minecraft:air
+- 0.5,4.0,31.5/minecraft:air
+- 0.5,5.0,31.5/minecraft:air
+- 0.5,6.0,31.5/minecraft:air
+- 0.5,7.0,31.5/minecraft:air
+- 0.5,8.0,31.5/minecraft:air
+- 0.5,9.0,31.5/minecraft:air
+- 0.5,10.0,31.5/minecraft:air
+- 0.5,11.0,31.5/minecraft:air
+- 0.5,12.0,31.5/minecraft:air
+- 0.5,13.0,31.5/minecraft:air
+- 0.5,14.0,31.5/minecraft:air
+- 0.5,15.0,31.5/minecraft:air
+- 0.5,16.0,31.5/minecraft:air
+- 0.5,17.0,31.5/minecraft:air
+- 0.5,18.0,31.5/minecraft:air
+- 1.5,0.0,31.5/minecraft:dead_brain_coral_block
+- 1.5,1.0,31.5/minecraft:dead_brain_coral_block
+- 1.5,2.0,31.5/minecraft:air
+- 1.5,3.0,31.5/minecraft:air
+- 1.5,4.0,31.5/minecraft:air
+- 1.5,5.0,31.5/minecraft:air
+- 1.5,6.0,31.5/minecraft:air
+- 1.5,7.0,31.5/minecraft:air
+- 1.5,8.0,31.5/minecraft:air
+- 1.5,9.0,31.5/minecraft:air
+- 1.5,10.0,31.5/minecraft:air
+- 1.5,11.0,31.5/minecraft:air
+- 1.5,12.0,31.5/minecraft:air
+- 1.5,13.0,31.5/minecraft:air
+- 1.5,14.0,31.5/minecraft:air
+- 1.5,15.0,31.5/minecraft:air
+- 1.5,16.0,31.5/minecraft:air
+- 1.5,17.0,31.5/minecraft:air
+- 1.5,18.0,31.5/minecraft:air
+- 2.5,0.0,31.5/minecraft:cobblestone
+- 2.5,1.0,31.5/minecraft:air
+- 2.5,2.0,31.5/minecraft:air
+- 2.5,3.0,31.5/minecraft:air
+- 2.5,4.0,31.5/minecraft:air
+- 2.5,5.0,31.5/minecraft:air
+- 2.5,6.0,31.5/minecraft:air
+- 2.5,7.0,31.5/minecraft:air
+- 2.5,8.0,31.5/minecraft:air
+- 2.5,9.0,31.5/minecraft:air
+- 2.5,10.0,31.5/minecraft:air
+- 2.5,11.0,31.5/minecraft:air
+- 2.5,12.0,31.5/minecraft:air
+- 2.5,13.0,31.5/minecraft:air
+- 2.5,14.0,31.5/minecraft:air
+- 2.5,15.0,31.5/minecraft:air
+- 2.5,16.0,31.5/minecraft:air
+- 2.5,17.0,31.5/minecraft:air
+- 2.5,18.0,31.5/minecraft:air
+- 3.5,0.0,31.5/minecraft:cobblestone
+- 3.5,1.0,31.5/minecraft:air
+- 3.5,2.0,31.5/minecraft:air
+- 3.5,3.0,31.5/minecraft:air
+- 3.5,4.0,31.5/minecraft:air
+- 3.5,5.0,31.5/minecraft:air
+- 3.5,6.0,31.5/minecraft:air
+- 3.5,7.0,31.5/minecraft:air
+- 3.5,8.0,31.5/minecraft:air
+- 3.5,9.0,31.5/minecraft:air
+- 3.5,10.0,31.5/minecraft:air
+- 3.5,11.0,31.5/minecraft:air
+- 3.5,12.0,31.5/minecraft:air
+- 3.5,13.0,31.5/minecraft:air
+- 3.5,14.0,31.5/minecraft:air
+- 3.5,15.0,31.5/minecraft:air
+- 3.5,16.0,31.5/minecraft:air
+- 3.5,17.0,31.5/minecraft:air
+- 3.5,18.0,31.5/minecraft:air
+- 4.5,0.0,31.5/minecraft:cobblestone
+- 4.5,1.0,31.5/minecraft:air
+- 4.5,2.0,31.5/minecraft:air
+- 4.5,3.0,31.5/minecraft:air
+- 4.5,4.0,31.5/minecraft:air
+- 4.5,5.0,31.5/minecraft:air
+- 4.5,6.0,31.5/minecraft:air
+- 4.5,7.0,31.5/minecraft:air
+- 4.5,8.0,31.5/minecraft:air
+- 4.5,9.0,31.5/minecraft:air
+- 4.5,10.0,31.5/minecraft:air
+- 4.5,11.0,31.5/minecraft:air
+- 4.5,12.0,31.5/minecraft:air
+- 4.5,13.0,31.5/minecraft:air
+- 4.5,14.0,31.5/minecraft:air
+- 4.5,15.0,31.5/minecraft:air
+- 4.5,16.0,31.5/minecraft:air
+- 4.5,17.0,31.5/minecraft:air
+- 4.5,18.0,31.5/minecraft:air

@@ -1,0 +1,31 @@
+New worlds spawn structures: true
+Valid worlds:
+  em_id_the_palace_2: true
+  em_id_the_palace_3: true
+  em_id_the_palace_4: true
+  em_id_the_palace_5: true
+  em_id_the_palace_6: true
+  em_id_the_palace_7: true
+  em_id_the_palace_8: true
+  em_id_the_palace_9: true
+  em_id_the_city_1: true
+  em_id_the_city_2: true
+  em_id_the_mines_1: true
+  em_id_the_palace_1: true
+  em_id_the_climb_1: true
+  em_id_the_climb_2: true
+  em_id_the_climb_3: true
+  em_id_the_climb_4: true
+  em_id_binder_of_worlds_1: true
+  Lobby: false
+  em_fireworks: false
+  em_sewer_maze: false
+  em_shadow_of_the_binder_of_worlds: false
+  em_hallosseum: false
+  em_steamworks_lair: false
+  em_north_pole: false
+  em_adventurers_guild: false
+  em_knight_castle: false
+  world: true
+  world_nether: true
+  world_the_end: true

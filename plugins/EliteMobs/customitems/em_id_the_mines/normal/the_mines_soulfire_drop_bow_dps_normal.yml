@@ -1,0 +1,14 @@
+name: "&2Dawn"
+material: BOW
+level: 20
+lore:
+- "&2Piercing the darkness like daylight."
+enchantments:
+- ARROW_FIRE,5
+- ARROW_DAMAGE,3
+- DAMAGE_ALL,2
+potionEffects:
+- NIGHT_VISION,0,self,continuous
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

@@ -1,0 +1,12 @@
+name: "&eAncient Defender"
+material: DIAMOND_AXE
+level: 25
+lore:
+- "&eExcellent axe for defending yourself."
+enchantments:
+- PROTECTION_ENVIRONMENTAL,7
+- PROTECTION_PROJECTILE,5
+- LOUD_STRIKES,2
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

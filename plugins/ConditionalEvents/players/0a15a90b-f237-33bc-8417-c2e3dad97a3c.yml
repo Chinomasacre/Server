@@ -1,0 +1,5 @@
+name: ElGabus
+events:
+  join:
+    one_time: true
+    cooldown: 0

@@ -1,0 +1,14 @@
+name: "&eMastercraft Bow"
+material: CROSSBOW
+level: 30
+lore:
+- "&eThis bow has been crafted out of"
+- "&eonly the finest void root."
+enchantments:
+- PIERCING,4
+- MULTISHOT,7
+- DAMAGE_ALL,3
+- LOUD_STRIKES,2
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

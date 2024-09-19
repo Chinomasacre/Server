@@ -1,0 +1,17 @@
+isEnabled: false
+material: ELYTRA
+name: '&bOwl Charm'
+lore:
+- '&aBecome the ultimate nocturnal'
+- '&apredator!'
+enchantments:
+- VANISHING_CURSE,1
+potionEffects:
+- GLOWING,0,target,onHit
+- JUMP,2,self,continuous
+- NIGHT_VISION,0,self,continuous
+- WEAKNESS,0,self,continuous
+- POISON,5,self,continuous
+- WITHER,3,self,continuous
+- BLINDNESS,1,self,continous
+dropWeight: '1'

@@ -1,0 +1,29 @@
+isEnabled: true
+entityType: DROWNED
+name: $normalLevel &8Shifting Miner
+level: 20
+mainHand: TRIDENT
+offHand: IRON_PICKAXE
+helmet: LEATHER_HELMET
+boots: LEATHER_BOOTS
+instanced: true
+healthMultiplier: 4
+damageMultiplier: 1
+movementSpeedAttribute: 0.33
+uniqueLootList:
+- filename: the_mines_shifting_flesh_drop_axe_dps_normal.yml
+  chance: 0.10
+  difficultyID: 0
+- filename: the_mines_shifting_flesh_drop_axe_dps_hard.yml
+  chance: 0.10
+  difficultyID: 1
+- filename: the_mines_shifting_flesh_drop_axe_dps_mythic.yml
+  chance: 0.10
+  difficultyID: 2
+frozen: false
+# leashRadius: 30
+followDistance: 30
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+normalizedCombat: true
+dropsRandomLoot: false

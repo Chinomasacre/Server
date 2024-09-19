@@ -1,0 +1,9 @@
+isEnabled: true
+name: "&cHidden Note"
+material: "PAPER"
+lore:
+- "&cMy greatest creation yet! Daine will be impressed!"
+- "&cIt isn’t capable of greater thought, but what it"
+- "&clacks in brains it makes up with brawn."
+scalability: scalable
+itemType: unique

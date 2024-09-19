@@ -1,0 +1,67 @@
+isEnabled: true
+entityType: ZOMBIFIED_PIGLIN
+isBaby: true
+name: $reinforcementLevel &cSoul of Haste
+level: 20
+instanced: true
+healthMultiplier: 1.0
+damageMultiplier: 0.01
+frozen: true
+# leashRadius: 40
+followDistance: 40
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: false
+normalizedCombat: true
+dropsRandomLoot: false
+movementSpeedAttribute: 0.001
+trails:
+- HEART
+eliteScript:
+  Sound:
+    Events:
+    - EliteMobSpawnEvent
+    Actions:
+    - action: PLAY_SOUND
+      sValue: "entity.evoker.cast_spell"
+      Target:
+        targetType: SELF
+      repeatEvery: 25
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+  Tag:
+    Events:
+    - EliteMobSpawnEvent
+    Zone:
+      shape: CYLINDER
+      radius: 30
+      height: 2
+      Target:
+        targetType: SELF_SPAWN
+        offset: 0,0,18
+      filter: ELITE
+    Actions:
+    - action: SET_MOB_AI
+      wait: 1
+      Target:
+        targetType: SELF
+      bValue: false
+    - action: PUSH
+      Target: 
+        targetType: SELF
+      vValue: 0,0.7,0
+    - action: TAG
+      tags:
+      - "Tag2"
+      duration: 20
+      Target:
+        targetType: ZONE_FULL
+      repeatEvery: 21
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true

@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 191.95.141.5
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1720231111048
+  login: 1720231051175
+money: '500'
+last-account-name: Chino1966
+lastlocation:
+  world: 99a0f00b-2fd8-418f-80f2-7f584e8fade3
+  world-name: world
+  x: 0.0
+  y: 72.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 99a0f00b-2fd8-418f-80f2-7f584e8fade3
+  world-name: world
+  x: 0.5
+  y: 66.0
+  z: 0.5
+  yaw: 120.35891723632812
+  pitch: 21.3936767578125

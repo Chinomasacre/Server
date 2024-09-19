@@ -1,0 +1,5 @@
+name: amisa
+events:
+  join:
+    one_time: true
+    cooldown: 0

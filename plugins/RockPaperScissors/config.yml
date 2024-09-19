@@ -1,0 +1,78 @@
+settings:
+  # Prefix that will be adding to every message sending by this plugin
+  prefix: '&2&lRPS &7▷ '
+  
+  # Every options relevant to rock-paper-scissors game system you can find in this section
+  gameConfig:
+    # Maximum amount of bet (0 = no limit)
+    maxBet: 10000.0
+    # Minimum amount of bet
+    minBet: 0.0
+    # The time a player has to accept a game invitation
+    # (change require server restart)
+    acceptTime: 30
+    # The time a player has to make a choice. The time is measured
+    # from the moment one of the players makes a choice.
+    # If the player don't make a choice by the end of this time,
+    # he will lose.
+    # (change require server restart)
+    chooseTime: 30
+    # By turning on this option, the game will automatically replay if it ends in a draw.
+    replayOnDraw: true
+  
+  # Every options relevant to rock-paper-scissors gui you can find in this section
+  gui:
+    main:
+      # All names of materials witch you can use for section 'item' you will find here
+      # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+      title: '&8Rock Paper Scissors'
+      rock:
+        item: COBBLESTONE
+        name: '&8&lRock'
+      paper:
+        item: PAPER
+        name: '&f&lPaper'
+      scissors:
+        item: SHEARS
+        name: '&c&lScissors'
+      fillItem:
+        item: GRAY_STAINED_GLASS_PANE
+        name: ' '
+  
+  messages:
+    # Warning! Placeholders are created for specific messages.
+    # Information on how to use the appropriate placeholders can be found next to the respective message.
+    descriptionCommand:
+    - ''
+    - '&7&m--[-------&r &2RPS Commands &7&m-------]--'
+    - ''
+    - ' &f/&2rps game &f<player> <bet> &7- Sends an invitation to play rock paper
+      scissors'
+    - ' &f/&2rps accept &f<player> &7- Accepts an invitation to play rock paper scissors'
+    - ''
+    noPermission: '&4You do not have permission to use this command'
+    badUseRpsGameCmd: '&7You have to give player name and bet argument &f/&7rps game
+      &f<&7player&f> <&7bet&f>'
+    badUseRpsAcceptCmd: '&7You have to give player name argument &f/&7rps accept &f<&7player&f>'
+    betOutOfRangeMax: '&7Bet cannot be greater than &f{MAX} &7$' # Placeholder {MAX} - value that is set in config in section 'maxBet'
+    betOutOfRangeMin: '&7Bet cannot be less than &f{MIN} &7$' # Placeholder {MIN} - value that is set in config in section 'minBet'
+    myselfInvite: '&7You cannot invite yourself'
+    rpsInvite: '&7Player &f{NAME}&7 invites you to play &fRock Paper Scissors&r&7
+      for &f{BET}&7$.' # Placeholder {NAME} - name of player that send invite, {BET} - value of bet
+    notEnoughMoney: '&7You or your rival dose have enough money for this game'
+    playerNotExist: '&7Player with name &f{NAME}&7 is not online or does not exist' # Placeholder {NAME} - name of player
+    noInvitation: '&7You do not have invitation from player &f{NAME}' # Placeholder {NAME} - name of the player whose invitation was attempted to be accepted.
+    alreadyInvite: '&7You already send invitation to this player'
+    alreadyPlay: '&7Player &f{NAME}&7 is already playing rock-paper-scissors' # Placeholder {NAME} - name of player who is already playing game
+    winMessage: '&aYou won! You receive &f{BET}&a$' # Placeholder {BET} - value of bet
+    loseMessage: '&cYou lost! You lose &f{BET}&c$' # Placeholder {BET} - value of bet
+    drawNormalMessage: '&fDraw! No funds are lost or gained.'
+    drawReplayMessage: '&fDraw! The game will be replayed.'
+    successfullyChoice: '&7You choose &f{CHOICE}&7.' # Placeholder {CHOICE} - name of choice
+    successfullyInvite: '&7You successfully invited &f{NAME}&7 to game.' # Placeholder {NAME} - name of invited player
+    successfullyPluginReload: '&7Plugin has successfully reloaded.'
+    waitingForOpponent: '&7Waiting for opponent...'
+    noVaultDependency: '&4No Vault dependency found! Plugin wont work correctly.'
+  
+  chatButtons:
+    rpsInviteAcceptButton: '&2&l Click to accept'

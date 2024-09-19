@@ -1,0 +1,136 @@
+isEnabled: true
+entityType: WITHER_SKELETON
+name: $normalLevel &cRoyal Guard
+level: 30
+instanced: true
+healthMultiplier: 15
+damageMultiplier: 0.8
+# spawnCooldown: 1
+movementSpeedAttribute: 0.28
+mainHand: NETHERITE_SWORD
+offHand: NETHERITE_SWORD
+helmet: NETHERITE_HELMET
+chestplate: NETHERITE_CHESTPLATE
+leggings: NETHERITE_LEGGINGS
+boots: NETHERITE_BOOTS
+phases:
+- em_id_the_city_royal_guard_p2.yml:0.70
+- em_id_the_city_royal_guard_p3.yml:0.40
+powers:
+- filename: invulnerability_knockback.yml
+  difficultyID:
+  - 1
+  - 2
+- em_id_the_city_final_boss_thunder_pillars.yml
+frozen: false
+# leashRadius: 115
+followDistance: 90
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: true
+normalizedCombat: true
+dropsRandomLoot: false
+spawnLocations:
+- em_id_the_city,90.5,134,-101.5,0.0,0.0:1701964560179
+eliteScript:
+  TriggerBarriers:
+    Events:
+    - EliteMobEnterCombatEvent
+    Actions:
+    - action: RUN_SCRIPT
+      scripts:
+      - ErectBarrier1
+      - ErectBarrier2
+  ErectBarrier1:
+    Zone:
+      shape: CUBOID
+      x: 13
+      y: 18
+      z: 2
+      Target:
+        targetType: LOCATION
+        location: same_as_boss,90.5,134,-77.5,0,0
+    Actions:
+    - action: PUSH
+      vValue: 0,0,-1
+      Target:
+        targetType: ZONE_FULL
+      repeatEvery: 5
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    - action: SPAWN_PARTICLE
+      particles:
+      - particle: EXPLOSION_NORMAL
+      Target:
+        targetType: ZONE_FULL
+        coverage: 0.1
+      repeatEvery: 20
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    - action: TELEPORT
+      FinalTarget:
+        targetType: LOCATION
+        location: same_as_boss,90.5,134,-86.5,-180,0
+      Target:
+        targetType: NEARBY_PLAYERS
+        range: 99
+    Cooldowns:
+      local: 99999
+      global: 20
+  ErectBarrier2:
+    Zone:
+      shape: CUBOID
+      x: 2
+      y: 18
+      z: 50
+      Target:
+        targetType: LOCATION
+        location: same_as_boss,108.5,134,-100.5,0,0
+    Actions:
+    - action: PUSH
+      vValue: -1,0,0
+      Target:
+        targetType: ZONE_FULL
+      repeatEvery: 5
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    - action: SPAWN_PARTICLE
+      particles:
+      - particle: EXPLOSION_NORMAL
+      Target:
+        targetType: ZONE_FULL
+        coverage: 0.05
+      repeatEvery: 20
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    Cooldowns:
+      local: 99999
+      global: 20
+  Sleep:
+    Events:
+    - EliteMobSpawnEvent
+    Actions:
+    - action: SET_MOB_AI
+      bValue: false
+      Target:
+        targetType: SELF
+  WakeUp:
+    Events:
+    - EliteMobDamagedByPlayerEvent
+    Actions:
+    - action: SET_MOB_AI
+      bValue: true
+      Target:
+        targetType: SELF

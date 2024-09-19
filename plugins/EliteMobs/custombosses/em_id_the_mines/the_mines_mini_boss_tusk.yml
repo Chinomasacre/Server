@@ -1,0 +1,136 @@
+isEnabled: true
+entityType: ZOGLIN
+name: $minibossLevel &cTransmuted Flesh
+level: 20
+instanced: true
+healthMultiplier: 4
+damageMultiplier: 1.2
+frozen: false
+powers:
+- filename: taze.yml
+  difficultyID:
+  - 1
+  - 2
+- the_mines_mini_boss_tusk_boost.yml
+uniqueLootList:
+- filename: the_mines_tusk_drop_boots_dps_normal.yml
+  chance: 0.5
+  difficultyID: 0
+- filename: the_mines_tusk_drop_boots_dps_hard.yml
+  chance: 0.5
+  difficultyID: 1
+- filename: the_mines_tusk_drop_boots_dps_mythic.yml
+  chance: 0.5
+  difficultyID: 2
+- filename: the_mines_tusk_drop_leggings_dps_normal.yml
+  chance: 0.5
+  difficultyID: 0
+- filename: the_mines_tusk_drop_leggings_dps_hard.yml
+  chance: 0.5
+  difficultyID: 1
+- filename: the_mines_tusk_drop_leggings_dps_mythic.yml
+  chance: 0.5
+  difficultyID: 2
+# leashRadius: 40
+followDistance: 40
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: true
+normalizedCombat: true
+dropsRandomLoot: false
+movementSpeedAttribute: 0.32
+spawnLocations:
+- em_id_the_mines,89.5,110,30.5,-90.0,0.0:1676457445077
+eliteScript:
+  CloseArena:
+    Events:
+    - EliteMobDamagedByPlayerEvent
+    Zone:
+      shape: CUBOID
+      x: 2
+      y: 6
+      z: 20
+      Target:
+        targetType: LOCATION
+        location: same_as_boss,110.5,110,29.5,0,0
+    Actions:
+    - action: TELEPORT
+      Target: 
+        targetType: NEARBY_PLAYERS
+        range: 50
+      FinalTarget:
+        targetType: LOCATION
+        location: same_as_boss,100.5,110,29.5,0,0
+    - action: SPAWN_PARTICLE
+      particles:
+      - particle: EXPLOSION_NORMAL
+      Target:
+        targetType: ZONE_FULL
+        coverage: 0.1
+      repeatEvery: 10
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    - action: PUSH
+      vValue: -1,0,0
+      Target:
+        targetType: ZONE_FULL
+      repeatEvery: 1
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    Cooldowns:
+      local: 99999
+      global: 10
+  Sleep:
+    Events:
+    - EliteMobSpawnEvent
+    Actions:
+    - action: SET_MOB_AI
+      bValue: false
+      Target:
+        targetType: SELF
+  WakeUp:
+    Events:
+    - EliteMobDamagedByPlayerEvent
+    Actions:
+    - action: SET_MOB_AI
+      bValue: true
+      Target:
+        targetType: SELF
+  MakeDome:
+    Events:
+    - EliteMobSpawnEvent
+    Zone:
+      shape: DOME
+      radius: 11
+      borderRadius: 10
+      Target:
+        targetType: LOCATION
+        location: same_as_boss,233.5,112,27.5,0,0
+        track: true
+    Actions:
+    - action: PLACE_BLOCK
+      material: RED_STAINED_GLASS
+      Target:
+        targetType: ZONE_BORDER
+  RemoveDome:
+    Events:
+    - EliteMobDeathEvent
+    Zone:
+      shape: DOME
+      radius: 11
+      borderRadius: 10
+      Target:
+        targetType: LOCATION
+        location: same_as_boss,233.5,112,27.5,0,0
+        track: true
+    Actions:
+    - action: PLACE_BLOCK
+      material: AIR
+      Target:
+        targetType: ZONE_BORDER

@@ -1,0 +1,12 @@
+name: "&fDwarven Chestplate"
+material: DIAMOND_CHESTPLATE
+level: 30
+lore:
+- "&fA bit used, but it will do."
+enchantments:
+- PROTECTION_FIRE,1
+- PROTECTION_ENVIRONMENTAL,2
+- LOUD_STRIKES,1
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

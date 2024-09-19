@@ -1,0 +1,5 @@
+name: srkimich
+events:
+  join:
+    one_time: true
+    cooldown: 0

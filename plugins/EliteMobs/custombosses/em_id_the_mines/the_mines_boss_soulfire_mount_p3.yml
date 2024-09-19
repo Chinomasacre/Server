@@ -1,0 +1,24 @@
+isEnabled: true
+entityType: SKELETON
+disguise: WITHER_SKELETON
+isBaby: true
+name: $bossLevel &cCharred Villager
+mainHand: NETHERITE_SWORD
+offHand: NETHERITE_SWORD
+level: 20
+instanced: true
+healthMultiplier: 15
+damageMultiplier: 0.5
+movementSpeedAttribute: 0.31
+powers:
+- invulnerability_knockback.yml
+- invulnerability_fire.yml
+- invulnerability_fall_damage.yml
+frozen: false
+# leashRadius: 80
+followDistance: 80
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: false
+normalizedCombat: true
+dropsRandomLoot: false

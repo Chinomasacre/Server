@@ -1,0 +1,293 @@
+isEnabled: true
+entityType: SKELETON
+disguise: WITHER_SKELETON
+mainHand: BOW
+spawnCooldown: 5
+name: $bossLevel &cInfused Soul
+mountedEntity: the_mines_boss_soulfire_mount_p1.yml
+level: 20
+instanced: true
+healthMultiplier: 7
+damageMultiplier: 1.0
+phases:
+- the_mines_boss_soulfire_p2.yml:0.66
+- the_mines_boss_soulfire_p3.yml:0.33
+powers:
+- the_mines_soulfire_arrow_launchers.yml
+- invulnerability_fire.yml
+- invulnerability_fall_damage.yml
+movementSpeedAttribute: 0.8
+frozen: false
+# leashRadius: 80
+followDistance: 80
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: true
+normalizedCombat: true
+dropsRandomLoot: false
+eliteScript:
+  WallVs:
+    Events:
+    - EliteMobEnterCombatEvent
+    Zone:
+      shape: CUBOID
+      x: 30
+      y: 30
+      z: 1
+      Target:
+        targetType: LOCATION
+        location: same_as_boss,275,134,138,0,0
+    Actions:
+    - action: RUN_SCRIPT
+      scripts:
+      - Wall
+    - action: SPAWN_PARTICLE
+      particles:
+      - particle: EXPLOSION_NORMAL
+      Target:
+        targetType: ZONE_FULL
+        coverage: 0.1
+      repeatEvery: 10
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    Cooldowns:
+      local: 99999
+      global: 10
+  Wall:
+    Zone:
+      shape: CUBOID
+      x: 30
+      y: 30
+      z: 2
+      Target:
+        targetType: LOCATION
+        location: same_as_boss,275,134,137,0,0
+    Actions:
+    - action: PUSH
+      Target:
+        targetType: ZONE_FULL
+      vValue: 0,0,2
+      repeatEvery: 1
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+  Sleep:
+    Events:
+    - EliteMobSpawnEvent
+    Actions:
+    - action: SET_MOB_AI
+      bValue: false
+      Target:
+        targetType: SELF
+  WakeUp:
+    Events:
+    - EliteMobDamagedByPlayerEvent
+    Zone:
+      shape: CYLINDER
+      radius: 1
+      height: 4
+      Target:
+        targetType: SELF_SPAWN
+        offset: 0,-1,0
+      filter: ELITE
+    Actions:
+    - action: SET_MOB_AI
+      bValue: true
+      Target:
+        targetType: SELF
+    - action: DAMAGE
+      Target:
+        targetType: ZONE_FULL
+      multiplier: 0.1
+      repeatevery: 5
+      times: 1
+  DeleteBonfire:
+    Events:
+    - EliteMobEnterCombatEvent
+    - EliteMobTargetPlayerEvent
+    Zone:
+      shape: DOME
+      radius: 3
+      Target:
+        targetType: SELF
+        offset: 0,-2,0
+    Actions:
+    - action: PLACE_BLOCK
+      wait: 5
+      material: AIR
+      Target:
+        targetType: ZONE_FULL
+    - action: SPAWN_PARTICLE
+      particles:
+      - particle: EXPLOSION_HUGE
+      Target:
+        targetType: ZONE_FULL
+        coverage: 0.05
+      repeatEvery: 5
+      times: 3
+    - action: PLAY_SOUND
+      sValue: "entity.dragon_fireball.explode"
+      Target:
+        targetType: SELF
+      wait: 5
+    Cooldowns:
+      local: 99999
+      global: 1
+spawnLocations:
+- em_id_the_mines,279.5,134,162.5,180.0,0.0:1687359400648
+onSpawnBlockStates:
+- -49.5,-28.0,-132.5/minecraft:stone_brick_stairs[facing=east,half=bottom,shape=outer_left,waterlogged=false]
+- -49.5,-28.0,-131.5/minecraft:air
+- -49.5,-28.0,-130.5/minecraft:air
+- -49.5,-28.0,-129.5/minecraft:spruce_trapdoor[facing=south,half=bottom,open=false,powered=false,waterlogged=false]
+- -49.5,-28.0,-128.5/minecraft:spruce_trapdoor[facing=south,half=bottom,open=false,powered=false,waterlogged=false]
+- -49.5,-27.0,-132.5/minecraft:cobblestone
+- -49.5,-27.0,-131.5/minecraft:air
+- -49.5,-27.0,-130.5/minecraft:air
+- -49.5,-27.0,-129.5/minecraft:air
+- -49.5,-27.0,-128.5/minecraft:air
+- -49.5,-26.0,-132.5/minecraft:mossy_stone_bricks
+- -49.5,-26.0,-131.5/minecraft:andesite
+- -49.5,-26.0,-130.5/minecraft:andesite
+- -49.5,-26.0,-129.5/minecraft:andesite
+- -49.5,-26.0,-128.5/minecraft:andesite
+- -49.5,-25.0,-132.5/minecraft:chiseled_stone_bricks
+- -49.5,-25.0,-131.5/minecraft:air
+- -49.5,-25.0,-130.5/minecraft:air
+- -49.5,-25.0,-129.5/minecraft:air
+- -49.5,-25.0,-128.5/minecraft:air
+- -49.5,-24.0,-132.5/minecraft:stone_bricks
+- -49.5,-24.0,-131.5/minecraft:andesite
+- -49.5,-24.0,-130.5/minecraft:cobblestone_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]
+- -49.5,-24.0,-129.5/minecraft:smooth_stone_slab[type=bottom,waterlogged=false]
+- -49.5,-24.0,-128.5/minecraft:smooth_stone_slab[type=bottom,waterlogged=false]
+- -48.5,-28.0,-132.5/minecraft:stone_brick_stairs[facing=north,half=bottom,shape=outer_left,waterlogged=false]
+- -48.5,-28.0,-131.5/minecraft:air
+- -48.5,-28.0,-130.5/minecraft:air
+- -48.5,-28.0,-129.5/minecraft:air
+- -48.5,-28.0,-128.5/minecraft:barrier
+- -48.5,-27.0,-132.5/minecraft:cobblestone
+- -48.5,-27.0,-131.5/minecraft:air
+- -48.5,-27.0,-130.5/minecraft:air
+- -48.5,-27.0,-129.5/minecraft:air
+- -48.5,-27.0,-128.5/minecraft:air
+- -48.5,-26.0,-132.5/minecraft:mossy_stone_bricks
+- -48.5,-26.0,-131.5/minecraft:andesite
+- -48.5,-26.0,-130.5/minecraft:andesite
+- -48.5,-26.0,-129.5/minecraft:andesite
+- -48.5,-26.0,-128.5/minecraft:andesite
+- -48.5,-25.0,-132.5/minecraft:chiseled_stone_bricks
+- -48.5,-25.0,-131.5/minecraft:air
+- -48.5,-25.0,-130.5/minecraft:air
+- -48.5,-25.0,-129.5/minecraft:air
+- -48.5,-25.0,-128.5/minecraft:cobblestone
+- -48.5,-24.0,-132.5/minecraft:stone_bricks
+- -48.5,-24.0,-131.5/minecraft:andesite
+- -48.5,-24.0,-130.5/minecraft:chiseled_stone_bricks
+- -48.5,-24.0,-129.5/minecraft:cobblestone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -48.5,-24.0,-128.5/minecraft:cobblestone_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]
+- -47.5,-28.0,-132.5/minecraft:air
+- -47.5,-28.0,-131.5/minecraft:air
+- -47.5,-28.0,-130.5/minecraft:barrier
+- -47.5,-28.0,-129.5/minecraft:barrier
+- -47.5,-28.0,-128.5/minecraft:spruce_slab[type=top,waterlogged=false]
+- -47.5,-27.0,-132.5/minecraft:air
+- -47.5,-27.0,-131.5/minecraft:air
+- -47.5,-27.0,-130.5/minecraft:air
+- -47.5,-27.0,-129.5/minecraft:air
+- -47.5,-27.0,-128.5/minecraft:air
+- -47.5,-26.0,-132.5/minecraft:andesite
+- -47.5,-26.0,-131.5/minecraft:andesite
+- -47.5,-26.0,-130.5/minecraft:andesite
+- -47.5,-26.0,-129.5/minecraft:andesite
+- -47.5,-26.0,-128.5/minecraft:andesite
+- -47.5,-25.0,-132.5/minecraft:air
+- -47.5,-25.0,-131.5/minecraft:air
+- -47.5,-25.0,-130.5/minecraft:stone_bricks
+- -47.5,-25.0,-129.5/minecraft:stone_bricks
+- -47.5,-25.0,-128.5/minecraft:fire[age=0,east=false,north=false,south=false,up=false,west=false]
+- -47.5,-24.0,-132.5/minecraft:andesite
+- -47.5,-24.0,-131.5/minecraft:cobblestone_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]
+- -47.5,-24.0,-130.5/minecraft:stone_bricks
+- -47.5,-24.0,-129.5/minecraft:stone_bricks
+- -47.5,-24.0,-128.5/minecraft:iron_trapdoor[facing=east,half=top,open=false,powered=false,waterlogged=false]
+- -46.5,-28.0,-132.5/minecraft:air
+- -46.5,-28.0,-131.5/minecraft:barrier
+- -46.5,-28.0,-130.5/minecraft:spruce_slab[type=top,waterlogged=false]
+- -46.5,-28.0,-129.5/minecraft:spruce_slab[type=top,waterlogged=false]
+- -46.5,-28.0,-128.5/minecraft:oak_wood[axis=z]
+- -46.5,-27.0,-132.5/minecraft:air
+- -46.5,-27.0,-131.5/minecraft:air
+- -46.5,-27.0,-130.5/minecraft:fern
+- -46.5,-27.0,-129.5/minecraft:spruce_trapdoor[facing=north,half=bottom,open=false,powered=false,waterlogged=false]
+- -46.5,-27.0,-128.5/minecraft:spruce_trapdoor[facing=north,half=bottom,open=false,powered=false,waterlogged=false]
+- -46.5,-26.0,-132.5/minecraft:andesite
+- -46.5,-26.0,-131.5/minecraft:andesite
+- -46.5,-26.0,-130.5/minecraft:andesite
+- -46.5,-26.0,-129.5/minecraft:andesite
+- -46.5,-26.0,-128.5/minecraft:andesite
+- -46.5,-25.0,-132.5/minecraft:andesite
+- -46.5,-25.0,-131.5/minecraft:cobblestone
+- -46.5,-25.0,-130.5/minecraft:fire[age=0,east=false,north=false,south=false,up=false,west=false]
+- -46.5,-25.0,-129.5/minecraft:fire[age=0,east=false,north=false,south=false,up=false,west=false]
+- -46.5,-25.0,-128.5/minecraft:stone_bricks
+- -46.5,-24.0,-132.5/minecraft:andesite
+- -46.5,-24.0,-131.5/minecraft:cobblestone_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]
+- -46.5,-24.0,-130.5/minecraft:iron_trapdoor[facing=west,half=top,open=false,powered=false,waterlogged=false]
+- -46.5,-24.0,-129.5/minecraft:iron_trapdoor[facing=east,half=top,open=false,powered=false,waterlogged=false]
+- -46.5,-24.0,-128.5/minecraft:stone_bricks
+- -45.5,-28.0,-132.5/minecraft:air
+- -45.5,-28.0,-131.5/minecraft:barrier
+- -45.5,-28.0,-130.5/minecraft:oak_log[axis=z]
+- -45.5,-28.0,-129.5/minecraft:oak_wood[axis=z]
+- -45.5,-28.0,-128.5/minecraft:oak_wood[axis=z]
+- -45.5,-27.0,-132.5/minecraft:air
+- -45.5,-27.0,-131.5/minecraft:air
+- -45.5,-27.0,-130.5/minecraft:air
+- -45.5,-27.0,-129.5/minecraft:air
+- -45.5,-27.0,-128.5/minecraft:air
+- -45.5,-26.0,-132.5/minecraft:andesite
+- -45.5,-26.0,-131.5/minecraft:andesite
+- -45.5,-26.0,-130.5/minecraft:andesite
+- -45.5,-26.0,-129.5/minecraft:andesite
+- -45.5,-26.0,-128.5/minecraft:andesite
+- -45.5,-25.0,-132.5/minecraft:air
+- -45.5,-25.0,-131.5/minecraft:air
+- -45.5,-25.0,-130.5/minecraft:stone_bricks
+- -45.5,-25.0,-129.5/minecraft:stone_bricks
+- -45.5,-25.0,-128.5/minecraft:fire[age=0,east=false,north=false,south=false,up=false,west=false]
+- -45.5,-24.0,-132.5/minecraft:andesite
+- -45.5,-24.0,-131.5/minecraft:cobblestone_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]
+- -45.5,-24.0,-130.5/minecraft:stone_bricks
+- -45.5,-24.0,-129.5/minecraft:stone_bricks
+- -45.5,-24.0,-128.5/minecraft:iron_trapdoor[facing=east,half=top,open=false,powered=false,waterlogged=false]
+- -44.5,-28.0,-132.5/minecraft:stone_brick_stairs[facing=east,half=bottom,shape=outer_left,waterlogged=false]
+- -44.5,-28.0,-131.5/minecraft:barrier
+- -44.5,-28.0,-130.5/minecraft:barrier
+- -44.5,-28.0,-129.5/minecraft:barrier
+- -44.5,-28.0,-128.5/minecraft:barrier
+- -44.5,-27.0,-132.5/minecraft:cobblestone
+- -44.5,-27.0,-131.5/minecraft:air
+- -44.5,-27.0,-130.5/minecraft:air
+- -44.5,-27.0,-129.5/minecraft:air
+- -44.5,-27.0,-128.5/minecraft:air
+- -44.5,-26.0,-132.5/minecraft:cobblestone
+- -44.5,-26.0,-131.5/minecraft:andesite
+- -44.5,-26.0,-130.5/minecraft:andesite
+- -44.5,-26.0,-129.5/minecraft:andesite
+- -44.5,-26.0,-128.5/minecraft:andesite
+- -44.5,-25.0,-132.5/minecraft:chiseled_stone_bricks
+- -44.5,-25.0,-131.5/minecraft:air
+- -44.5,-25.0,-130.5/minecraft:air
+- -44.5,-25.0,-129.5/minecraft:air
+- -44.5,-25.0,-128.5/minecraft:cobblestone
+- -44.5,-24.0,-132.5/minecraft:stone_bricks
+- -44.5,-24.0,-131.5/minecraft:andesite
+- -44.5,-24.0,-130.5/minecraft:chiseled_stone_bricks
+- -44.5,-24.0,-129.5/minecraft:cobblestone_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]
+- -44.5,-24.0,-128.5/minecraft:cobblestone_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]

@@ -1,0 +1,30 @@
+isEnabled: true
+entityType: CAVE_SPIDER
+name: $normalLevel &2Lesser Swarmling
+level: 20
+instanced: true
+healthMultiplier: 0.15
+damageMultiplier: 0.20
+# powers:
+# - attack_blinding.yml
+frozen: false
+# leashRadius: 30
+followDistance: 10
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: false
+normalizedCombat: true
+dropsRandomLoot: false
+cullReinforcements: false
+eliteScript:
+  Summon:
+    Events:
+    - EliteMobDeathEvent
+    Actions:
+    - action: SUMMON_REINFORCEMENT
+      sValue: "the_mines_swarmling_summon_weak.yml"
+      duration: 500
+      Target:
+        targetType: SELF
+      repeatEvery: 3
+      times: 2

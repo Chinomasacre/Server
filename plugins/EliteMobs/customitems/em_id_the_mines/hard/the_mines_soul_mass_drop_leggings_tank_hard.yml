@@ -1,0 +1,12 @@
+name: "&2Ethereal Leggings"
+material: DIAMOND_LEGGINGS
+level: 20
+lore:
+- "&2Ever fading."
+enchantments:
+- PROTECTION_EXPLOSIONS,3
+- DURABILITY,2
+- LOUD_STRIKES,2
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

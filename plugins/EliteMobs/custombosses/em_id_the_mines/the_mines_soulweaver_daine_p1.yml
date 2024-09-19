@@ -1,0 +1,71 @@
+isEnabled: true
+entityType: SPIDER
+name: $normalLevel &4Soulweaver Daine
+level: 20
+instanced: true
+healthMultiplier: 20
+damageMultiplier: 0.8
+powers:
+- filename: attack_wither.yml
+  difficultyID:
+  - 1
+  - 2
+- movement_speed.yml
+- the_mines_daine_bool_hard.yml
+- the_mines_daine_mumble.yml
+frozen: false
+# leashRadius: 115
+followDistance: 110
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: false
+normalizedCombat: true
+dropsRandomLoot: false
+eliteScript:
+  AntiCheese:
+    Events:
+    - EliteMobDamagedByPlayerEvent
+    Zone:
+      shape: CUBOID
+      x: 30
+      y: 60
+      z: 12
+      Target:
+        targetType: LOCATION
+        location: same_as_boss,234.5,27,4.5,0,0
+    Actions:
+    - action: TELEPORT
+      FinalTarget:
+        targetType: LOCATION
+        location: same_as_boss,228.5,24,-26.5,178,12
+      Target:
+        targetType: ZONE_FULL
+      repeatEvery: 20
+      times: 999
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    - action: MESSAGE
+      repeatEvery: 10
+      wait: 1
+      times: 1998
+      sValue: "&4[Soulweaver Daine] &fTrying to escape? I don't think so!"
+      Target:
+        targetType: ZONE_FULL
+      Conditions:
+        Target:
+          targetType: SELF
+        conditionType: BLOCKING
+        isAlive: true
+    # - action: SPAWN_PARTICLE
+      # repeatEvery: 20
+      # times: 999
+      # particles:
+      # - particle: EXPLOSION_NORMAL
+      # Target:
+        # targetType: ZONE_FULL
+    Cooldowns:
+      local: 19985
+      global: 10

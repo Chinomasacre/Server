@@ -1,0 +1,15 @@
+name: "&2Flame Kicks"
+material: DIAMOND_BOOTS
+level: 20
+lore:
+- "&2Excellent for kicking in skulls!"
+enchantments:
+- PROTECTION_ENVIRONMENTAL,5
+- PROTECTION_FALL,3
+- PROTECTION_PROJECTILE,2
+- LOUD_STRIKES,1
+potionEffects:
+- JUMP,2,self,onHit
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

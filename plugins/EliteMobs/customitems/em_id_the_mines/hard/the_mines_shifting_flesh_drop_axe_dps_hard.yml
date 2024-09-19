@@ -1,0 +1,11 @@
+name: "&2Shifting Axe"
+material: DIAMOND_AXE
+level: 20
+lore:
+- "&2The color of the axe shifts with every swing."
+enchantments:
+- DAMAGE_ALL,3
+- DAMAGE_ARTHROPODS,2
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

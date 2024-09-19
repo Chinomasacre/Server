@@ -1,0 +1,12 @@
+name: "&cSlimed Boots"
+material: DIAMOND_BOOTS
+level: 15
+lore:
+- "&cComfy but a bit noisy."
+enchantments:
+- "DAMAGE_ALL,7"
+- "DURABILITY,4"
+- "PROTECTION_FALL,3"
+- "DAMAGE_UNDEAD,3"
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

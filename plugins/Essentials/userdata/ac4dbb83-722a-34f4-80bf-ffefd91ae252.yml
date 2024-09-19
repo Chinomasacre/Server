@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 186.80.54.75
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1719440188291
+  login: 1719440130195
+money: '500.0'
+last-account-name: Estebaneit
+lastlocation:
+  world: 99a0f00b-2fd8-418f-80f2-7f584e8fade3
+  world-name: world
+  x: 0.0
+  y: 72.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: f9a98505-680b-4c53-8c8d-f15b42a9447c
+  world-name: Lobby
+  x: 21.446622669371177
+  y: 100.0
+  z: 50.401927622857386
+  yaw: -128.3999786376953
+  pitch: 23.69999122619629

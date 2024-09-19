@@ -1,0 +1,14 @@
+name: "&eAncient Helm"
+material: DIAMOND_HELMET
+level: 25
+lore:
+- "&eMade out of curious sparkling"
+- "&eblack stone."
+enchantments:
+- PROTECTION_ENVIRONMENTAL,7
+- PROTECTION_PROJECTILE,5
+- PROTECTION_EXPLOSIONS,4
+- LOUD_STRIKES,2
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

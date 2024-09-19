@@ -1,0 +1,30 @@
+isEnabled: true
+entityType: RABBIT
+name: $normalLevel &dFocused Thought
+level: 20
+instanced: true
+healthMultiplier: 0.6
+damageMultiplier: 1
+frozen: false
+powers:
+- invisibility.yml
+- skeleton_tracking_arrow.yml
+- implosion.yml
+# leashRadius: 30
+followDistance: 30
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: false
+normalizedCombat: true
+dropsRandomLoot: false
+eliteScript:
+  SlowFall:
+    Events:
+    - EliteMobSpawnEvent
+    Actions:
+    - action: POTION_EFFECT
+      potionEffectType: SLOW_FALLING
+      amplifier: 150
+      duration: 666
+      Target:
+        targetType: SELF

@@ -1,0 +1,12 @@
+name: "&2Shaped Chestplate"
+material: DIAMOND_CHESTPLATE
+level: 20
+lore:
+- "&2Has a salty scent."
+enchantments:
+- PROTECTION_ENVIRONMENTAL,2
+- PROTECTION_EXPLOSIONS,1
+- LOUD_STRIKES,1
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

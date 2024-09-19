@@ -1,0 +1,29 @@
+isEnabled: true
+entityType: IRON_GOLEM
+name: $normalLevel &cAncient Guardian
+level: 25
+instanced: true
+healthMultiplier: 25
+damageMultiplier: 0.8
+powers:
+- em_id_the_bridge_summon_drones.yml
+- em_id_the_bridge_lava_fall_p2.yml
+- movement_speed.yml
+- attack_push.yml
+- taze.yml
+- filename: em_id_the_bridge_pull_vacuum_p2_normal.yml
+  difficultyID:
+  - 0
+- filename: em_id_the_bridge_pull_vacuum_p2_hard.yml
+  difficultyID:
+  - 1
+- filename: em_id_the_bridge_pull_vacuum_p2_mythic.yml
+  difficultyID:
+  - 2
+frozen: false
+leashRadius: 110
+followDistance: 110
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+normalizedCombat: true
+dropsRandomLoot: false

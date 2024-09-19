@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 191.95.141.85
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1720710555883
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1721582613886
+  login: 1721581623111
+money: '99500.0'
+last-account-name: aaaaaaa
+lastlocation:
+  world: 99a0f00b-2fd8-418f-80f2-7f584e8fade3
+  world-name: world
+  x: 0.22847361748944164
+  y: 73.0
+  z: 2.5314042779937087
+  yaw: -0.7500019073486328
+  pitch: 18.750003814697266
+logoutlocation:
+  world: b25d52db-b404-48b7-ad77-965f5e206ddc
+  world-name: em_adventurers_guild
+  x: 258.9236982899453
+  y: 87.0
+  z: 233.3179001421824
+  yaw: -149.7497100830078
+  pitch: 39.449989318847656

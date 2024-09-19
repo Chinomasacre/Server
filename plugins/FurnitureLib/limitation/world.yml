@@ -1,0 +1,34 @@
+# This is the WorldLimitation File
+# You can limit the max amount of Furnitures each world
+# total.enable = (bool) | set default value for each project
+# total.global = (bool) | override the project limit and force use total.amount for each project
+# ----------------------------------------------
+# These Limitation type support permission Kits!
+# PermissionKit:
+# 	<kitName>:
+# 		world: -1
+# 		total:
+# 			enable: false
+# 			amount: -1
+# ----------------------------------------------
+# the permission for these kit is furniture.limit.world.<kitName>
+
+WorldLimit:
+  worlds:
+    etd_spawn: -1
+    em_fireworks: -1
+    em_sewer_maze: -1
+    em_shadow_of_the_binder_of_worlds: -1
+    em_hallosseum: -1
+    em_steamworks_lair: -1
+    em_north_pole: -1
+    em_adventurers_guild: -1
+    em_knight_castle: -1
+    world: -1
+    world_nether: -1
+    world_the_end: -1
+    Lobby: -1
+  total:
+    enable: false
+    amount: -1
+    global: false

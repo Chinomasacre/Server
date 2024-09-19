@@ -1,0 +1,8 @@
+general:
+  debug: false
+  enable-metrics: true
+  enable-compatibility-mode: false
+  specific-handler-path: none
+  handlers:
+    craftbukkit:
+      factory-path: ru.beykerykt.minecraft.lightapi.bukkit.internal.handler.craftbukkit.HandlerFactory

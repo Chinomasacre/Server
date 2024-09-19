@@ -1,0 +1,75 @@
+isEnabled: true
+entityType: SKELETON
+disguise: HUSK
+mainHand: BOW
+offHand: BOW
+helmet: IRON_HELMET
+boots: IRON_BOOTS
+name: $normalLevel &eLost Dwarf
+level: 30
+instanced: true
+healthMultiplier: 1.1
+damageMultiplier: 1.1
+movementSpeedAttribute: 0.29
+uniqueLootList:
+- filename: em_id_the_city_dwarf_set_two_drop_boots_dps_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_two_drop_bow_dps_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_two_drop_chestplate_dps_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_two_drop_helmet_dps_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_two_drop_leggings_dps_normal.yml
+  chance: 0.05
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_two_drop_boots_dps_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_two_drop_bow_dps_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_two_drop_chestplate_dps_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_two_drop_helmet_dps_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_two_drop_leggings_dps_hard.yml
+  chance: 0.05
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_two_drop_boots_dps_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_two_drop_bow_dps_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_two_drop_chestplate_dps_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_two_drop_helmet_dps_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_two_drop_leggings_dps_mythic.yml
+  chance: 0.05
+  difficultyID: 2
+frozen: false
+# leashRadius: 30
+followDistance: 80
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: true
+normalizedCombat: true
+dropsRandomLoot: false
+spawnLocations:
+- em_id_the_city,-31.5,123.5,-11.5,0.0,0.0:1701249138085
+- em_id_the_city,-5.5,123.5,-40.5,0.0,0.0:1701249208484
+- em_id_the_city,32.5,122.5,-84.5,0.0,0.0
+- em_id_the_city,162.5,134.5,28.5,0.0,0.0:1701249545684
+- em_id_the_city,100.5,135.5,-14.5,0.0,0.0
+- em_id_the_city,105.5,135.5,-32.5,0.0,0.0
+- em_id_the_city,39.5,124.5,-34.5,0.0,0.0

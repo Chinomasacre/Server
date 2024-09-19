@@ -1,0 +1,11 @@
+name: aaaaaaa
+events:
+  join:
+    one_time: true
+    cooldown: 0
+  recompensa:
+    one_time: true
+    cooldown: 0
+  fly:
+    one_time: false
+    cooldown: 1719358487025

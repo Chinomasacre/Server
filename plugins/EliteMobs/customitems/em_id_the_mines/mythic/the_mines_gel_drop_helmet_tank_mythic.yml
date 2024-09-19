@@ -1,0 +1,12 @@
+name: "&2Gel Helm"
+material: DIAMOND_HELMET
+level: 20
+lore:
+- "&2Does not offer much protection but it smells so good."
+enchantments:
+- PROTECTION_EXPLOSIONS,5
+- PROTECTION_ENVIRONMENTAL,3
+- LOUD_STRIKES,3
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

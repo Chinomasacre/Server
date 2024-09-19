@@ -1,0 +1,11 @@
+name: "&2Pig Helmet"
+material: DIAMOND_HELMET
+level: 20
+lore:
+- "&2Time to put this on and go roll in the mud."
+enchantments:
+- DAMAGE_ALL,3
+- PROTECTION_ENVIRONMENTAL,2
+scalability: scalable
+itemType: unique
+# Generated with https://magmaguy.com/webapp/webapp.html !

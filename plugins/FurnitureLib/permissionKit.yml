@@ -1,0 +1,18 @@
+kit:
+  vip:
+  - chair
+  - table
+  - largeTable
+  - barrels
+  normal:
+  - chair
+  - table
+  - largeTable
+  - barrels
+  - chair
+  - table
+  - largeTable
+  - chair
+  - table
+  - largeTable
+  - barrels

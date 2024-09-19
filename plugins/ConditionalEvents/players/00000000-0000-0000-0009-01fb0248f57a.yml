@@ -1,0 +1,5 @@
+name: .Chino1966
+events:
+  join:
+    one_time: true
+    cooldown: 0

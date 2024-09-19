@@ -1,0 +1,28 @@
+[Thu Jun 20 17:16:39 COT 2024] Chinomasacre | Location: X: 28 Y: 98 Z: 70 | Line: 0 | 
+[Thu Jun 20 17:16:39 COT 2024] Chinomasacre | Location: X: 28 Y: 98 Z: 70 | Line: 1 | 
+[Thu Jun 20 17:16:39 COT 2024] Chinomasacre | Location: X: 28 Y: 98 Z: 70 | Line: 2 | 
+[Thu Jun 20 17:16:39 COT 2024] Chinomasacre | Location: X: 28 Y: 98 Z: 70 | Line: 3 | 
+[Thu Jun 20 17:17:09 COT 2024] SrGato1202 | Location: X: 28 Y: 97 Z: 70 | Line: 0 | PERROS
+[Thu Jun 20 17:17:09 COT 2024] SrGato1202 | Location: X: 28 Y: 97 Z: 70 | Line: 1 | DE
+[Thu Jun 20 17:17:09 COT 2024] SrGato1202 | Location: X: 28 Y: 97 Z: 70 | Line: 2 | JUNGLA
+[Thu Jun 20 17:17:09 COT 2024] SrGato1202 | Location: X: 28 Y: 97 Z: 70 | Line: 3 | 
+[Thu Jun 20 17:17:31 COT 2024] SrGato1202 | Location: X: 32 Y: 97 Z: 70 | Line: 0 | ARMADURA
+[Thu Jun 20 17:17:31 COT 2024] SrGato1202 | Location: X: 32 Y: 97 Z: 70 | Line: 1 | PARA
+[Thu Jun 20 17:17:31 COT 2024] SrGato1202 | Location: X: 32 Y: 97 Z: 70 | Line: 2 | PERROS
+[Thu Jun 20 17:17:31 COT 2024] SrGato1202 | Location: X: 32 Y: 97 Z: 70 | Line: 3 | 
+[Thu Jun 20 17:19:16 COT 2024] SrGato1202 | Location: X: 32 Y: 97 Z: 70 | Line: 0 | ARMADURA
+[Thu Jun 20 17:19:16 COT 2024] SrGato1202 | Location: X: 32 Y: 97 Z: 70 | Line: 1 | PARA
+[Thu Jun 20 17:19:16 COT 2024] SrGato1202 | Location: X: 32 Y: 97 Z: 70 | Line: 2 | PERROS
+[Thu Jun 20 17:19:16 COT 2024] SrGato1202 | Location: X: 32 Y: 97 Z: 70 | Line: 3 | 
+[Wed Jun 26 13:37:41 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 0 | ascensores:
+[Wed Jun 26 13:37:41 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 1 | bloque de oro
+[Wed Jun 26 13:37:41 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 2 | loza de piedra
+[Wed Jun 26 13:37:41 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 3 | cocinada
+[Wed Jun 26 13:38:51 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 0 | sad
+[Wed Jun 26 13:38:51 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 1 | 
+[Wed Jun 26 13:38:51 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 2 | 
+[Wed Jun 26 13:38:51 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 3 | 
+[Wed Jun 26 13:39:44 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 0 | ascensores:
+[Wed Jun 26 13:39:44 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 1 | Bloque de oro
+[Wed Jun 26 13:39:44 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 2 | 
+[Wed Jun 26 13:39:44 UTC 2024] aaaaaaa | Location: X: 47 Y: 96 Z: 50 | Line: 3 | Loza Piedra cocin

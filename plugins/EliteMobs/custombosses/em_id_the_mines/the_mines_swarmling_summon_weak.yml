@@ -1,0 +1,17 @@
+isEnabled: true
+entityType: CAVE_SPIDER
+name: $normalLevel &2Weak Swarmling
+level: 20
+instanced: true
+healthMultiplier: 0.10
+damageMultiplier: 0.10
+powers:
+- attack_blinding.yml
+frozen: false
+# leashRadius: 30
+followDistance: 10
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: false
+normalizedCombat: true
+dropsRandomLoot: false

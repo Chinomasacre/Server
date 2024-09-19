@@ -1,0 +1,5 @@
+name: .Jhonna16
+events:
+  join:
+    one_time: true
+    cooldown: 0

@@ -1,0 +1,128 @@
+isEnabled: true
+entityType: HUSK
+name: $normalLevel &eDwarven Worker
+level: 30
+instanced: true
+healthMultiplier: 1.5
+damageMultiplier: 0.75
+movementSpeedAttribute: 0.32
+mainHand: IRON_SHOVEL
+helmet: IRON_HELMET
+chestplate: LEATHER_CHESTPLATE
+leggings: LEATHER_LEGGINGS
+boots: IRON_BOOTS
+disguise: custom:the_city_dwarf_broken
+customDisguiseData: player the_city_dwarf_broken setskin {"id":"ea6cd059-27fe-4430-b82f-77505f5b00c9","name":"Unknown","properties":[{"name":"textures","value":"ewogICJ0aW1lc3RhbXAiIDogMTcwMTI1MDYwMjYzNywKICAicHJvZmlsZUlkIiA6ICJlODgyNzRlYjNmNTE0ZDYwYmMxYWQ5NTQ4MTIxODMwMyIsCiAgInByb2ZpbGVOYW1lIiA6ICJBbmltYWxUaGVHYW1lciIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81ZjU4ZjZlNzBhNmFhMTdiYjBhMTFlOTdjYTIyOTA0NmUyMDU4ZDRmOTBlZTc0ZDhkYTEzOTdkYjc5YzYxOGRlIgogICAgfQogIH0KfQ==","signature":"iB9kQn3GgQF6VxoYgQ/08OmC9gaNeX907ltHW5wU+oi2jqAsQzlixVKX9o2M5QGoKVypqcAR9dsLWnMnvSoTQfH6AWreC5EqKy+k11hDe9aOcIQOWrpMAuvj4z9Bqt6LvG+sg35bK+2RFiqu78+xPWns0/h6UT4ifc9SVS1Hl5QYQd9h8/ATsT5KY90/XO5uLMuq+Cjr7FHr5oaUL0n8b81AWX5qzPgzEekATruRVkZVxhinpYTYfDCUR5bLXuZLL529j9uMDr0JbbVHu9beQLJ3Xxzf52inhdxj8cfQZ5hvVA68hngAsQ53xP9KZqKWwErtUlTEUzZGFMn9ZzARECZn2HynuUw51ekDUSTu4ZhQYsnnTEe23xgHaKRB4OZd7mvdrvJL/iU2zHXTKCims5RdHg8a00M/s9L4oSkNufAoGp9uPNqtDJNBya+/4tTgdAXn92fnYT787LffbMRGpR9cjSzUQh74G3Vt5CxatveSLishadnq0EZA3GfdgYqAn/FluJfHSnHRlLVeCLJK1VptM5nLpIJDpJjJphAabWdMlJsuXRtpHHbojl2qqnIMW7u7RN5lcU+dvyaQv/qu0mtUpXTv+1OvPYlB4rPZ4DceIPI6r9EsCSMUpAAENh6F+6VcjCh6RTbmuoyiHiZjCp+IZ/P1BDFEJzKi9Pzlys8="}],"legacy":false}
+powers:
+- lightning_bolts.yml
+- shield_wall.yml
+uniqueLootList:
+- filename: em_id_the_city_dwarf_set_one_drop_boots_tank_normal.yml
+  chance: 0.02
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_one_drop_chestplate_tank_normal.yml
+  chance: 0.02
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_one_drop_helmet_tank_normal.yml
+  chance: 0.02
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_one_drop_leggings_tank_normal.yml
+  chance: 0.02
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_one_drop_shield_tank_normal.yml
+  chance: 0.02
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_one_drop_boots_tank_hard.yml
+  chance: 0.02
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_one_drop_chestplate_tank_hard.yml
+  chance: 0.02
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_one_drop_helmet_tank_hard.yml
+  chance: 0.02
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_one_drop_leggings_tank_hard.yml
+  chance: 0.02
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_one_drop_shield_tank_hard.yml
+  chance: 0.02
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_one_drop_boots_tank_mythic.yml
+  chance: 0.02
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_one_drop_chestplate_tank_mythic.yml
+  chance: 0.02
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_one_drop_helmet_tank_mythic.yml
+  chance: 0.02
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_one_drop_leggings_tank_mythic.yml
+  chance: 0.02
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_one_drop_shield_tank_mythic.yml
+  chance: 0.02
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_two_drop_boots_dps_normal.yml
+  chance: 0.02
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_two_drop_bow_dps_normal.yml
+  chance: 0.02
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_two_drop_chestplate_dps_normal.yml
+  chance: 0.02
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_two_drop_helmet_dps_normal.yml
+  chance: 0.02
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_two_drop_leggings_dps_normal.yml
+  chance: 0.02
+  difficultyID: 0
+- filename: em_id_the_city_dwarf_set_two_drop_boots_dps_hard.yml
+  chance: 0.02
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_two_drop_bow_dps_hard.yml
+  chance: 0.02
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_two_drop_chestplate_dps_hard.yml
+  chance: 0.02
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_two_drop_helmet_dps_hard.yml
+  chance: 0.02
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_two_drop_leggings_dps_hard.yml
+  chance: 0.02
+  difficultyID: 1
+- filename: em_id_the_city_dwarf_set_two_drop_boots_dps_mythic.yml
+  chance: 0.02
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_two_drop_bow_dps_mythic.yml
+  chance: 0.02
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_two_drop_chestplate_dps_mythic.yml
+  chance: 0.02
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_two_drop_helmet_dps_mythic.yml
+  chance: 0.02
+  difficultyID: 2
+- filename: em_id_the_city_dwarf_set_two_drop_leggings_dps_mythic.yml
+  chance: 0.02
+  difficultyID: 2
+onDamageMessages:
+- "Not that. Not that. No"
+- "Hehehehehe!"
+frozen: false
+# leashRadius: 30
+followDistance: 80
+dropsEliteMobsLoot: false
+dropsVanillaLoot: false
+isRegionalBoss: true
+normalizedCombat: true
+dropsRandomLoot: false
+spawnLocations:
+- em_id_the_city,-7.5,122.5,-72.5,0.0,0.0:1701249197689
+- em_id_the_city,115.5,134.5,-21.5,0.0,0.0:1701964424756
+- em_id_the_city,151.5,135.5,15.5,0.0,0.0:1701249572938
+- em_id_the_city,164.5,135.5,84.5,0.0,0.0:1701249543937
+- em_id_the_city,81.5,137.5,5.5,0.0,0.0
+- em_id_the_city,42.5,130.5,11.5,0.0,0.0
+- em_id_the_city,48.5,134.5,-29.5,0.0,0.0:1701249380086

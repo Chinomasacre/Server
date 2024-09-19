@@ -1,0 +1,8 @@
+name: Unknown
+events:
+  join:
+    one_time: true
+    cooldown: 0
+  fly:
+    one_time: false
+    cooldown: 1723468359242
